@@ -5,7 +5,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(180deg, white 0%, #A2268D 100%);
+    background: linear-gradient(180deg, white 0%, #fccaf4 100%);
     color: transparent;
     color: black;
     scroll-behavior: smooth; /* Enable smooth scrolling */
@@ -77,7 +77,7 @@ header {
 .banner {
     width: 100%;
     position: relative;
-    color: white;
+    color: black;
     padding: 150px 20px 100px;
     text-align: center;
     margin-top: 142px;
