@@ -1,0 +1,179 @@
+html {
+    font-family: Poppins,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    font-size: 1.125rem;
+}
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header {
+    background-color: white;
+    padding: 10px 20px;
+    color: #A2268D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 9px 40px -13px rgba(0, 0, 0, .25);
+    z-index: 1000;
+}
+.header-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.top-header div {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    max-width: 250px;
+    height: auto;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.menu li {
+    margin: 0 15px;
+}
+.menu a {
+    color: #A2268D;
+    text-decoration: none;
+    font-weight: bold;
+}
+.quote-button {
+    background-color: #A2268D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.banner {
+    width: 100%;
+    position: relative;
+    color: white;
+    padding: 150px 20px 100px;
+    text-align: center;
+    margin-top: 120px; /* Adjust for header height */
+    overflow: hidden;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/NovaBalance/assets/img/NovaBannerPattern.png');
+    background-size: cover;
+    background-position: center;
+    /* filter: blur(5px) brightness(50%); /* Blurs and darkens the image */
+    z-index: -2;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: -1;
+}
+
+.banner h1, .banner p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Makes text pop more */
+}
+
+p {
+    line-height: 160%;
+    font-weight: 400;
+}
+
+.intro {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+.screenshots {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+.screenshot {
+    width: 30%;
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-form {
+    background-color: #492468;
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    max-width: 600px;
+    margin: 40px auto;
+}
+input, textarea, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    background-color: #A2268D;
+    color: white;
+    cursor: pointer;
+}
+footer {
+    background-color: #A2268D;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.not-found {
+    padding-bottom: 30%;
+    margin: 0 auto;
+    padding-top: 30%;
+    text-align: center;
+}
+.logo-style.nova {
+    color: black;
+}
+  
+.logo-style.forma {
+    color: #A2268D;
+}
