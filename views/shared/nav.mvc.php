@@ -4,6 +4,7 @@
             <div class="logo">
                 <img src="assets/img/NovaBalanceLogo.webp" alt="Logo">
             </div>
+            <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="2" height="90" viewBox="0 0 2 87" fill="none"><path d="M1 0V87" stroke="#DDDDDD"></path></svg>
             <div>
                 <ul class="menu">
                     <li><a href="#">Početna</a></li>
