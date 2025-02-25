@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner" id="functions">
     <h2>Funkcionalnosti <br>
         <span class="logo-style nova">Nova</span></b> <span class="logo-style forma">Forma</span></b> računovodstvo: Vi radite pametnije, ne teže.
     </h2>
