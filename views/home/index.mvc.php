@@ -41,6 +41,18 @@
                 <div class="screenshot">Screenshot 2</div>
                 <div class="screenshot">Screenshot 3</div>
             </div>
+            <div class="funkcionalnosti">
+                <h4>Saznajte više o funkcionalnostima</h4>
+                <p>
+                    Otkrijte kako automatizacija i pametna rešenja
+                    pojednostavljuju vaše računovodstvo. Automatizacija u <b><span class="logo-style nova">Nova</span><span class="logo-style forma">Forma</span></b> softveru znači da više ne
+                    morate provoditi sate ručno unoseći podatke ili proveravajući da li su sve stavke tačne.
+                    Naš sistem automatski prepoznaje i obrađuje dokumente, generiše izveštaje i omogućava vam
+                    da se posvetite važnijim aspektima poslovanja. Upoznajte se sa svim pametnim funkcijama koje
+                    vam olakšavaju rad.
+                </p>
+            </div>
+            {% include "home/bannerFunc.mvc.php" %}
             {% include "home/contact.mvc.php" %}
         </div>
     </div>
