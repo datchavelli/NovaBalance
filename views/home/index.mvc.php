@@ -58,4 +58,6 @@
     </div>
 
 
+    {% include "home/modal.mvc.php" %}
+
 {% endblock %}

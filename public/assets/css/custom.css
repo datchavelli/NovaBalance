@@ -9,7 +9,7 @@ body {
     color: transparent;
     color: black;
     scroll-behavior: smooth; /* Enable smooth scrolling */
-    font-size: 1.125rem;
+    font-size: 1.125rem !important;
     
 }
 .wrapper {
@@ -144,17 +144,22 @@ p {
     max-width: 600px;
     margin: 40px auto;
 }
-input, textarea, button {
+input, textarea {
     width: 100%;
     margin: 10px 0;
     padding: 15px;
     border: none;
     border-radius: 5px;
 }
-button {
+.novabutton {
     background-color: #A2268D;
     color: white;
     cursor: pointer;
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
 }
 footer {
     background-color: #A2268D;
@@ -181,4 +186,17 @@ footer {
 }
 .btnSubmit {
     width: 100%;
+}
+.contact-section {
+    margin-top: 50px;
+}
+.functions-section {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
 }

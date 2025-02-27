@@ -14,7 +14,7 @@
                 </ul>
             </div>
             <div>
-                <span><a href="#contact" class="quote-button">Request a Quote</a></span>
+                <span><a href="#contact" class="novabutton quote-button">Request a Quote</a></span>
             </div>
         </div>
         
