@@ -3,7 +3,7 @@
         <!-- Contact Form on the Left -->
         <div class="col-md-6 contact-form">
             <h2 class="mx-auto">Tu smo za Vas!</h2>
-            <form>
+            <form action="">
                 <div class="form-group">
                     <label for="cntc_name">Ime/Naziv Firme</label>
                     <input type="text" class="form-control" id="cntc_name" name="cntc_name" required>
