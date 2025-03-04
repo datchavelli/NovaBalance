@@ -10,6 +10,10 @@ use App\Models\Contact;
 
 class Home extends Controller
 {
+    public function __construct( private Contact $model)
+    {
+    }
+
     public function index(): Response
     {  
         return $this->view("home/index.mvc.php");
@@ -18,16 +22,15 @@ class Home extends Controller
     public function contact(): Response
     {
         $data = [
-            "contact_name" => $this->request->post["cntc_name"],
-            "contact_address" => $this->request->post['cntc_address'],
-            "contact_phone" => $this->request->post['cntc_phone'],
-            "contact_email" => $this->request->post['cntc_email'],
-            "contact_pib" => $this->request->post['cntc_pib']
+            "name" => $this->request->post["cntc_name"],
+            "address" => $this->request->post['cntc_address'],
+            "phone" => $this->request->post['cntc_phone'],
+            "email" => $this->request->post['cntc_email'],
+            "pib" => $this->request->post['cntc_pib']
         ];
 
-        $contactModel = new Contact();
 
-        if ($contactModel->insert($data)) {
+        if ($this->model->insert($data)) {
             return $this->redirect("/NovaBalance/");
         }  else {
     

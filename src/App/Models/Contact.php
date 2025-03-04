@@ -8,5 +8,7 @@ use PDO;
 
 class Contact extends Model
 {
+    protected $table = "submissions";
+
     
 }
