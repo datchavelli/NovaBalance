@@ -27,14 +27,20 @@
                 <div class="screenshot">Screenshot 2</div>
                 <div class="screenshot">Screenshot 3</div>
             </div>
-            <div class="intro o-nama" id="about">
+            <div class="intro o-nama container" id="about">
                 <h4>Nova<span class="logo-style forma">Balance</span> tim: Vaš partner u digitalnoj revoluciji računovodstva.</h4>
-
-                <p>Više od 20 godina iskustva u rešavanju računovodstvenih problema pomoću softverskih alata
-                    učinilo nas je pouzdanim partnerom mnogim kompanijama. Naša misija je jasna -
-                    automatizacija računovodstvenih procesa i upravljanje dokumentima, njihovo elektronsko
-                    arhiviranje uz pomoć integracije sa DoCloop DMS sistemom, kako biste imali više vremena za
-                    ono što je zaista važno. Vaše poslovanje raste uz naše inovativne alate.</p>
+                <div class="row">
+                    <div class="col-sm">
+                        <p>Više od 20 godina iskustva u rešavanju računovodstvenih problema pomoću softverskih alata
+                            učinilo nas je pouzdanim partnerom mnogim kompanijama. Naša misija je jasna -
+                            automatizacija računovodstvenih procesa i upravljanje dokumentima, njihovo elektronsko
+                            arhiviranje uz pomoć integracije sa DoCloop DMS sistemom, kako biste imali više vremena za
+                            ono što je zaista važno. Vaše poslovanje raste uz naše inovativne alate.</p>
+                    </div>
+                    <div class="col-sm">
+                        <img alt='superhero' class="img-fluid" src="assets/img/superheroN.webp">
+                    </div>
+                </div>
             </div>
             <div class="screenshots">
                 <div class="screenshot">Screenshot 1</div>
@@ -53,6 +59,23 @@
                 </p>
             </div>
             {% include "home/bannerFunc.mvc.php" %}
+            <br>
+            <div class="resenja container">
+                <h4>Rešenja</h4>
+                <div class="row">
+                    <div class="col-sm">
+                        <p><b>Više vremena za poslovanje, manje za papire.</b></p>
+                        <img alt="business" class="img-fluid" src="assets/img/clipartPaperwork.webp">
+                    </div>
+                    <div class="col-sm">
+                        <p>Bez obzira da li ste preduzetnik, knjigovođa ili vlasnik firme, <b><span class="logo-style nova">Nova</span><span class="logo-style forma">Forma</span></b> pojednostavljuje
+                            vođenje knjiga, upravljanje troškovima i analizu finansija. Brza obrada dokumentacije i
+                            automatska priprema poreskih obrazaca olakšavaju ispunjavanje svih zakonskih obaveza.
+                            Integracija sa DoCloop DMS sistemom omogućava brzu i sigurnu elektronsku razmenu
+                            dokumenata.</p>
+                    </div>
+                </div>
+            </div>
             {% include "home/contact.mvc.php" %}
         </div>
     </div>

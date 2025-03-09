@@ -18,6 +18,13 @@ class Home extends Controller
     {  
         return $this->view("home/index.mvc.php");
     }
+
+    public function usluge():Response
+    {
+      return $this->view("usluge/index.mvc.php",[
+        "h1Title" => "Usluge"
+      ]);
+    }
     
     public function contact(): Response
     {
