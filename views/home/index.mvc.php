@@ -9,7 +9,6 @@
 <div class="wrapper">
         <div class="container">
             <div class="intro">
-                <!-- <h2>Nova forma računovodstva</h2> -->
                 <p>Znate li razliku između knjigovodstva i računovodstva?
                     Knjigovodstvo evidentira, a računovodstvo analizira i planira.
                     <b><span class="logo-style nova">Nova</span><span class="logo-style forma">Forma</span></b> softver ne samo da beleži sve vaše transakcije, već automatski analizira i generiše
