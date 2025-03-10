@@ -35,7 +35,13 @@
                             učinilo nas je pouzdanim partnerom mnogim kompanijama. Naša misija je jasna -
                             automatizacija računovodstvenih procesa i upravljanje dokumentima, njihovo elektronsko
                             arhiviranje uz pomoć integracije sa DoCloop DMS sistemom, kako biste imali više vremena za
-                            ono što je zaista važno. Vaše poslovanje raste uz naše inovativne alate.</p>
+                            ono što je zaista važno. Vaše poslovanje raste uz naše inovativne alate.
+                        </p>
+                        <p>
+                        Upoznajte nas bolje i saznajte šta nas pokreće. Iza <b><span class="logo-style nova">Nova</span><span class="logo-style forma">Forma</span></b>  softvera
+                        stoji tim sa vizijom da računovodstvo učini dostupnim, jednostavnim i bez stresa. Pročitajte kako
+                        smo počeli, šta nas motiviše i zašto smo vaš najbolji saveznik u digitalizaciji poslovanja.
+                        </p>
                     </div>
                     <div class="col-sm">
                         <img alt='superhero' class="img-fluid" src="assets/img/superheroN.webp">
@@ -49,7 +55,7 @@
             </div>
             <div class="funkcionalnosti">
                 <h4>Saznajte više o funkcionalnostima</h4>
-                <p>
+                <p class="mb-0">
                     Otkrijte kako automatizacija i pametna rešenja
                     pojednostavljuju vaše računovodstvo. Automatizacija u <b><span class="logo-style nova">Nova</span><span class="logo-style forma">Forma</span></b> softveru znači da više ne
                     morate provoditi sate ručno unoseći podatke ili proveravajući da li su sve stavke tačne.
@@ -64,11 +70,11 @@
                 <h4>Rešenja</h4>
                 <div class="row">
                     <div class="col-sm">
-                        <p><b>Više vremena za poslovanje, manje za papire.</b></p>
+                        <p class="mb-0"><b>Više vremena za poslovanje, manje za papire.</b></p>
                         <img alt="business" class="img-fluid" src="assets/img/clipartPaperwork.webp">
                     </div>
                     <div class="col-sm">
-                        <p>Bez obzira da li ste preduzetnik, knjigovođa ili vlasnik firme, <b><span class="logo-style nova">Nova</span><span class="logo-style forma">Forma</span></b> pojednostavljuje
+                        <p class="mb-0">Bez obzira da li ste preduzetnik, knjigovođa ili vlasnik firme, <b><span class="logo-style nova">Nova</span><span class="logo-style forma">Forma</span></b> pojednostavljuje
                             vođenje knjiga, upravljanje troškovima i analizu finansija. Brza obrada dokumentacije i
                             automatska priprema poreskih obrazaca olakšavaju ispunjavanje svih zakonskih obaveza.
                             Integracija sa DoCloop DMS sistemom omogućava brzu i sigurnu elektronsku razmenu
