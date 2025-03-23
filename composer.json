@@ -1,0 +1,17 @@
+{
+    "name": "pitaodmaline/nova-balance",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App/",
+            "Framework\\": "src/Framework/"
+
+        }
+    },
+    "authors": [
+        {
+            "name": "Danilo Zdravkovic",
+            "email": "dan.zdravkovic97@gmail.com"
+        }
+    ],
+    "require": {}
+}
