@@ -13,5 +13,7 @@
             "email": "dan.zdravkovic97@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "mailchimp/marketing": "^3.0"
+    }
 }
