@@ -7,6 +7,7 @@ namespace App\Controllers;
 use Framework\Controller;
 use Framework\Response;
 use App\Models\Contact;
+use App\Services\MailchimpService;
 
 class Home extends Controller
 {
@@ -36,6 +37,8 @@ class Home extends Controller
             "pib" => $this->request->post['cntc_pib']
         ];
 
+        $mailchimp = new MailchimpService();
+        $result = $mailchimp->addSubscriber($data);
 
         if ($this->model->insert($data)) {
             return $this->redirect("/NovaBalance/");
@@ -49,6 +52,7 @@ class Home extends Controller
           }
 
     }
+
 
     public function create(): Response
     {
