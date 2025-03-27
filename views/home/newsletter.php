@@ -15,10 +15,12 @@
 								</div>
 							</div>
 							<div class="col-md-4"></div>
-                    <br/><br/><br/>
+                    <br/>
                     <button class="btn btn-warning btn-lg">Prijavite se za novosti!</button>
               </form>
             </div>
         </div>
     </div>
 </div>
+<br/>
+<br/>

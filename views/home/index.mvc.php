@@ -80,10 +80,10 @@
                             dokumenata.</p>
                     </div>
                 </div>
+                {% include "home/contact.mvc.php" %}
             </div>
-            {% include "home/contact.mvc.php" %}
-            {% include "home/newsletter.php" %}
         </div>
+        {% include "home/newsletter.php" %}
     </div>
 
 

@@ -1,5 +1,5 @@
-html {
-    font-family: Poppins,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+.h1, .h2, .h3, .h4, .h5, .h6, a, body, h1, h2, h3, h4, h5, h6, html, p {
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
 }
 body {
     font-family: Arial, sans-serif;
@@ -69,6 +69,10 @@ header {
 }
 .menu li a:hover {
     color: black; /* Change text color to black on hover */
+}
+
+.podcast-btn{
+    margin-bottom: 4px;
 }
 
 .quote-button {

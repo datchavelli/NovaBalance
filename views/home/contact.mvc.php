@@ -32,7 +32,6 @@
         
         <!-- Google Map on the Right -->
         <div class="col-md-6">
-            <div class="row">
                 <!-- <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11377.2177898391!2d20.64031745!3d44.8706284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a6f7e0b1b1b1b%3A0x7e0b1b1b1b1b1b1b!2sPan%C4%8Devo%2C%20Srbija!5e0!3m2!1ssr!2srs!4v1614701941175!5m2!1ssr!2srs"
                     width="100%" 
@@ -45,8 +44,7 @@
                 <p><b>Instant Znanje: Digitalna revolucija u računovodstvu: Računovodstvo 2.0</b></p>
                 <p> Saznajte kako digitalni alati menjaju način na koji poslujete.
                 Automatizacija, e kasnost i priče iz prakse - sve na jednom mestu.</p>
-                <a href="#" class='btn btn-primary'>Slušajte sada</a>
-            </div>
+                <a href="#" class='btn btn-primary podcast-btn'><i class="ri-volume-up-line"></i> Slušajte sada</a>
             <div class="">
                 <img alt="konto-kosta-superhero"  class="img-fluid"  src="assets/img/kontokosta_logo.png">
             </div>
