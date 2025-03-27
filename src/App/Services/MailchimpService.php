@@ -28,12 +28,6 @@ class MailchimpService
             return $this->mailchimp->lists->addListMember($this->listId, [
                 'email_address' => $data['email'],
                 'status' => 'subscribed', // or 'pending' for double opt-in
-                'merge_fields' => [
-                    'FNAME' => $data['name'],
-                    'MERGE3' => $data['address'],
-                    'PHONE' => $data['phone'],
-                    'COMPANY' => $data['pib']
-                ]
             ]);
         } catch (\Exception $e) {
             return ['error' => $e->getMessage()];

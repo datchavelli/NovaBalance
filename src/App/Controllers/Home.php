@@ -37,41 +37,39 @@ class Home extends Controller
             "pib" => $this->request->post['cntc_pib']
         ];
 
-        $mailchimp = new MailchimpService();
-        $result = $mailchimp->addSubscriber($data);
+    
 
         if ($this->model->insert($data)) {
+          //TODO: Ako je uspesno ubacen treba i da posalje mail!
             return $this->redirect("/NovaBalance/");
         }  else {
     
             return $this->view("home/index.mvc.php", [
-              "errors" => $this->model->getErrors(),
-              "product" => $data
+              "errors" => $this->model->getErrors()
             ]);
       
           }
 
     }
 
-
-    public function create(): Response
+    public function subscribe(): Response
     {
-      $data = [
-        "name" => $this->request->post['name'],
-        "description" => empty($this->request->post['description']) ? null : $this->request->post['description']
-      ];
-  
-      if ($this->model->insert($data)) {
-  
-        return $this->redirect("/NovaBalance/products/{$this->model->getInsertID()}/show");
-  
-      } else {
+        $data = [
+            "email" => $this->request->post['email'],
+        ];
+
+        $mailchimp = new MailchimpService();
+        $result = $mailchimp->addSubscriber($data);
+
+        if ($result) {
+            return $this->redirect("/NovaBalance/");
+        }  else {
     
-        return $this->view("products/new.mvc.php", [
-          "errors" => $this->model->getErrors(),
-          "product" => $data
-        ]);
-  
-      }
+            return $this->view("home/index.mvc.php", [
+              "errors" => $result['error']
+            ]);
+      
+          }
+
     }
 }

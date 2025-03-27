@@ -81,6 +81,7 @@
                     </div>
                 </div>
             </div>
+            {% include "home/newsletter.php" %}
             {% include "home/contact.mvc.php" %}
         </div>
     </div>
