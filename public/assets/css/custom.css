@@ -265,3 +265,6 @@ footer {
     background-color:#A2268D !important;
     border-color: #492468 !important;
 }
+.function-card{
+    cursor: help;
+}

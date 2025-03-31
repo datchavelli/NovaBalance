@@ -5,7 +5,7 @@
     </p>
     <div class="row g-4">
         <div class="col-md-4">
-            <div class="card shadow-lg border-0 p-4 h-100">
+            <div class="card shadow-lg border-0 p-4 h-100 function-card" data-id="automatizovani" >
                 <div class="card-body">
                     <i class="bi bi-calculator display-4 text-primary"></i>
                     <h5 class="card-title mt-3">Automatizovani obračuni</h5>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card shadow-lg border-0 p-4 h-100">
+            <div class="card shadow-lg border-0 p-4 h-100 function-card" data-id="docloop">
                 <div class="card-body">
                     <i class="bi bi-file-earmark-text display-4 text-primary"></i>
                     <h5 class="card-title mt-3">Integracija sa DoCloop</h5>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card shadow-lg border-0 p-4 h-100">
+            <div class="card shadow-lg border-0 p-4 h-100 function-card" data-id="autoucitavanje">
                 <div class="card-body">
                     <i class="bi bi-cloud-upload display-4 text-primary"></i>
                     <h5 class="card-title mt-3">Automatsko učitavanje</h5>
