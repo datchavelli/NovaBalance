@@ -8,13 +8,13 @@
       <div class="card">
         <div class="card-body login-card-body">
           <p class="login-box-msg">Molimo Vas, prijavite se.</p>
-          <form action="" method="post">
+          <form action="/NovaBalance/admin/login" method="post">
             <div class="input-group mb-3">
-              <input type="email" class="form-control" id='user-email' name='user-email' placeholder="Email" />
+              <input type="email" class="form-control" id='user-email' name='user-email' placeholder="Email" required/>
               <div class="input-group-text"><span class="bi bi-envelope"></span></div>
             </div>
             <div class="input-group mb-3">
-              <input type="password" id='user-password' name='user-password' class="form-control" placeholder="Password" />
+              <input type="password" id='user-password' name='user-password' class="form-control" placeholder="Password" required/>
               <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
             </div>
             <!--begin::Row-->
@@ -39,6 +39,11 @@
           <p class="mb-1"><a href="forgot-password.html">Zaboravio sam lozinku</a></p>
         </div>
         <!-- /.login-card-body -->
+      </div>
+      <div class="<?= isset($errors) ? "hidden" : "" ?> errors">
+        <?php if(isset($errors)): ?>
+          <p><?= $errors ?></p>
+        <?php unset($errors); endif; ?>
       </div>
     </div>
     <!-- /.login-box -->

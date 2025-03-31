@@ -50,9 +50,9 @@ class Home extends Controller
                 <p><strong>Address:</strong> {$data['address']}</p>
                 <p><strong>PIB:</strong> {$data['pib']}</p>
             ";
-
+            
             $emailSent = $mailer->send("dev@novabalance.rs", $subject, $body);
-
+            
             // ✅ Response handling
             $responseData = ["success" => "Email Saved!"];
             if (!$emailSent) {

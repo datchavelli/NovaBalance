@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 define("ROOT_PATH", dirname(__DIR__));
 
+session_start();
+
 // Load Composer's autoloader
 require ROOT_PATH . "/vendor/autoload.php";
 

@@ -14,13 +14,21 @@ class MailerService
     public function __construct()
     {
         $this->mail = new PHPMailer(true);
+
+           // Enable SMTP debugging
+        $this->mail->SMTPDebug = 3; // 3 = Full Debugging, 2 = Basic, 0 = Off
+        $this->mail->Debugoutput = function ($str, $level) {
+            error_log("SMTP Debug ($level): " . $str);
+        };
+        $this->mail->Timeout = 10; // Prevent infinite hang
+
         // SMTP Configuration
         $this->mail->isSMTP();
         $this->mail->Host = $_ENV['SMTP_HOST'];
         $this->mail->SMTPAuth = true;
         $this->mail->Username = $_ENV['SMTP_USER'];
         $this->mail->Password = $_ENV['SMTP_PASS'];
-        $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $this->mail->Port = (int) $_ENV['SMTP_PORT'];
 
         // Sender
