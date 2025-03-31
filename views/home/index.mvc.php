@@ -87,6 +87,7 @@
     </div>
 
 
-    {% include "home/modal.mvc.php" %}
+    {% include "home/func-modal.mvc.php" %}
+    {% include "notification-modals/contact-form-modal.php" %}
 
 {% endblock %}

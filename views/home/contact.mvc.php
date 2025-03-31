@@ -4,7 +4,7 @@
         <div class="col-md-6 contact-form">
             <h2 class="mx-auto">Tu smo za Vas!</h2>
             <p>Pošaljite nam poruku – odgovaramo brzo!</p>
-            <form action="/NovaBalance/home/contact" method="post">
+            <form id='contact-form' action="/NovaBalance/home/contact" method="post">
                 <div class="form-group">
                     <label for="cntc_name">Ime/Naziv Firme</label>
                     <input type="text" class="form-control" id="cntc_name" name="cntc_name" required>
@@ -26,7 +26,7 @@
                     <input type="text" class="form-control" id="cntc_pib" name="cntc_pib" required>
                 </div>
                 <br>
-                <button name='btnSubmit' class="novabutton btn btn-primary" id="btnSubmit" type="submit">Pošalji</button>
+                <button name='btnSubmitContact' class="novabutton btn btn-primary" id="btnSubmitContact" type="submit">Pošalji</button>
             </form>
         </div>
         
