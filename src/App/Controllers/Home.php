@@ -52,7 +52,7 @@ class Home extends Controller
             ";
             
             $emailSent = $mailer->send("dev@novabalance.rs", $subject, $body);
-            
+
             // ✅ Response handling
             $responseData = ["success" => "Email Saved!"];
             if (!$emailSent) {
