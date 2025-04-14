@@ -1,5 +1,34 @@
-.h1, .h2, .h3, .h4, .h5, .h6, a, body, h1, h2, h3, h4, h5, h6, html, p {
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+a,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+p {
+    font-family:
+        Poppins,
+        -apple-system,
+        BlinkMacSystemFont,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+a:hover {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+a {
+    text-decoration: none !important;
+    /* color: #87317d !important; */
+    color: white;
 }
 body {
     font-family: Arial, sans-serif;
@@ -10,7 +39,6 @@ body {
     color: black;
     scroll-behavior: smooth; /* Enable smooth scrolling */
     font-size: 1.125rem !important;
-    
 }
 .wrapper {
     width: 100%;
@@ -20,14 +48,14 @@ body {
 header {
     background-color: white;
     padding: 10px 20px;
-    color: #A2268D;
+    color: #a2268d;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
     margin: 0 auto;
-    box-shadow: 0 9px 40px -13px rgba(0, 0, 0, .25);
+    box-shadow: 0 9px 40px -13px rgba(0, 0, 0, 0.25);
     z-index: 1000;
 }
 .header-content {
@@ -62,7 +90,7 @@ header {
     margin: 0 15px;
 }
 .menu a {
-    color: #A2268D;
+    color: #a2268d;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
@@ -71,12 +99,12 @@ header {
     color: black; /* Change text color to black on hover */
 }
 
-.podcast-btn{
+.podcast-btn {
     margin-bottom: 4px;
 }
 
 .quote-button {
-    background-color: #A2268D;
+    background-color: #a2268d;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -100,7 +128,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/NovaBalance/assets/img/NovaBannerNew.webp');
+    background-image: url("/NovaBalance/assets/img/NovaBannerNew.webp");
     background-size: cover;
     background-position: center;
     /* filter: blur(5px) brightness(50%); /* Blurs and darkens the image */
@@ -118,7 +146,8 @@ header {
     z-index: -1;
 }
 
-.banner h1, .banner p {
+.banner h1,
+.banner p {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Makes text pop more */
 }
 
@@ -173,16 +202,18 @@ p {
 
 .contact-form .form-control {
     border-radius: 6px;
-    border: 1px solid #A2268D;
+    border: 1px solid #a2268d;
     padding: 12px;
     background-color: white;
     color: #492468;
     font-size: 16px;
-    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition:
+        border 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
 }
 
 .contact-form .form-control:focus {
-    border-color: #A2268D;
+    border-color: #a2268d;
     box-shadow: 0 0 8px rgba(162, 38, 141, 0.5);
     outline: none;
 }
@@ -194,18 +225,19 @@ p {
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 6px;
-    background-color: #A2268D;
+    background-color: #a2268d;
     color: white;
     border: none;
     transition: background-color 0.3s ease-in-out;
 }
 
 .novabutton:hover {
-    background-color: #87317D;
+    background-color: #87317d;
     cursor: pointer;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     margin: 10px 0;
     padding: 15px;
@@ -213,7 +245,7 @@ input, textarea {
     border-radius: 5px;
 }
 .novabutton {
-    background-color: #A2268D;
+    background-color: #a2268d;
     color: white;
     cursor: pointer;
     width: 100%;
@@ -223,7 +255,7 @@ input, textarea {
     border-radius: 5px;
 }
 footer {
-    background-color: #A2268D;
+    background-color: #a2268d;
     padding: 20px;
     color: white;
     text-align: center;
@@ -241,9 +273,9 @@ footer {
 .logo-style.nova {
     color: black;
 }
-  
+
 .logo-style.forma {
-    color: #A2268D;
+    color: #a2268d;
 }
 .btnSubmit {
     width: 100%;
@@ -261,10 +293,10 @@ footer {
 .card:hover {
     transform: translateY(-5px);
 }
-.btn-primary{
-    background-color:#A2268D !important;
+.btn-primary {
+    background-color: #a2268d !important;
     border-color: #492468 !important;
 }
-.function-card{
+.function-card {
     cursor: help;
 }

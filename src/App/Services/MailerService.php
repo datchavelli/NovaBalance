@@ -15,7 +15,7 @@ class MailerService
     {
         $this->mail = new PHPMailer(true);
 
-           // Enable SMTP debugging
+        // Enable SMTP debugging
         $this->mail->SMTPDebug = 3; // 3 = Full Debugging, 2 = Basic, 0 = Off
         $this->mail->Debugoutput = function ($str, $level) {
             error_log("SMTP Debug ($level): " . $str);
@@ -24,15 +24,15 @@ class MailerService
 
         // SMTP Configuration
         $this->mail->isSMTP();
-        $this->mail->Host = $_ENV['SMTP_HOST'];
+        $this->mail->Host = $_ENV["SMTP_HOST"];
         $this->mail->SMTPAuth = true;
-        $this->mail->Username = $_ENV['SMTP_USER'];
-        $this->mail->Password = $_ENV['SMTP_PASS'];
+        $this->mail->Username = $_ENV["SMTP_USER"];
+        $this->mail->Password = $_ENV["SMTP_PASS"];
         $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $this->mail->Port = (int) $_ENV['SMTP_PORT'];
+        $this->mail->Port = (int) $_ENV["SMTP_PORT"];
 
         // Sender
-        $this->mail->setFrom($_ENV['SMTP_FROM'], $_ENV['SMTP_FROM_NAME']);
+        $this->mail->setFrom($_ENV["SMTP_FROM"], $_ENV["SMTP_FROM_NAME"]);
     }
 
     public function send(string $to, string $subject, string $body): bool
@@ -42,6 +42,32 @@ class MailerService
             $this->mail->Subject = $subject;
             $this->mail->Body = $body;
             $this->mail->isHTML(true);
+
+            return $this->mail->send();
+        } catch (Exception $e) {
+            error_log("Mail error: " . $this->mail->ErrorInfo);
+            return false;
+        }
+    }
+
+    public function sendNewsletterConfirmation(string $to): bool
+    {
+        try {
+            $this->mail->addAddress($to);
+            $this->mail->Subject = "Uspešna prijava na Newsletter";
+            $this->mail->isHTML(true);
+            $this->mail->Body = "
+                   <h3>Uspešno ste se prijavili!</h3>
+                   <p>Hvala što ste se pridružili našoj zajednici. Ostanite uz nas za najnovije vesti i ažuriranja.</p>
+                   Kao mali znak zahvalnosti u prilogu Vam šaljemo poklon.
+                   ";
+
+            // ✅ Dodaj prilog (ako postoji)
+            $attachmentPath =
+                ROOT_PATH . "/public/files/newsletter-welcome.pdf";
+            if (file_exists($attachmentPath)) {
+                $this->mail->addAttachment($attachmentPath);
+            }
 
             return $this->mail->send();
         } catch (Exception $e) {
