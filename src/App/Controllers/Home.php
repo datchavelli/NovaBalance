@@ -7,21 +7,29 @@ namespace App\Controllers;
 use Framework\Controller;
 use Framework\Response;
 use App\Models\Contact;
+use App\Models\Page;
 use App\Services\MailchimpService;
 
 class Home extends Controller
 {
-    public function __construct(private Contact $model) {}
+    public function __construct(private Contact $model, private Page $page) {}
 
     public function index(): Response
     {
-        return $this->view("home/index.mvc.php");
+        $page = $this->page;
+        $content = $page->getPageContent("/home");
+        return $this->view("home/index.mvc.php", [
+            "content" => $content,
+        ]);
     }
 
     public function usluge(): Response
     {
+        $page = $this->page;
+        $content = $page->getPageContent("/usluge");
         return $this->view("usluge/index.mvc.php", [
             "h1Title" => "Usluge",
+            "content" => $content,
         ]);
     }
 
