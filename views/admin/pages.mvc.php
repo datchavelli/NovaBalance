@@ -6,11 +6,11 @@
           <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-              <div class="col-sm-6"><h3 class="mb-0">Dashboard</h3></div>
+              <div class="col-sm-6"><h3 class="mb-0">Stranice</h3></div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                  <li class="breadcrumb-item active" aria-current="page">Stranice</li>
                 </ol>
               </div>
             </div>
@@ -25,8 +25,7 @@
           <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-                <h3>Stranice</h3>
-                <h3>Kontakt Forma</h3>
+                <p>Test</p>
             </div>
             <!-- /.row (main row) -->
           </div>

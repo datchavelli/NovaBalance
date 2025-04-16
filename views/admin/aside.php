@@ -38,13 +38,15 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="./index" class="nav-link">
+                      <a href="./pages" class="nav-link <?= $page == "pages"
+                          ? "active"
+                          : "" ?>">
                       <i class="bi bi-file-earmark-fill"></i>
                       <p>Stranice</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
+                    <a href="./contact-form" class="nav-link">
                       <i class="bi bi-person-lines-fill"></i>
                       <p>Sa kontakt forme</p>
                     </a>

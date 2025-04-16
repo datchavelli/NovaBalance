@@ -10,52 +10,64 @@ use App\Services\MailchimpService;
 
 class Admin extends Controller
 {
-    public function __construct( private User $model)
-    {
-    }
+    public function __construct(private User $model) {}
 
     public function index(): Response
-    {  
-        if(!isset($_SESSION['user'])){
+    {
+        if (!isset($_SESSION["user"])) {
             return $this->view("admin/login.mvc.php");
-        }else {
-            return $this->view("admin/index.mvc.php");
+        } else {
+            return $this->view("admin/index.mvc.php", [
+                "page" => "home",
+            ]);
+        }
+    }
+
+    public function pages(): Response
+    {
+        if (!isset($_SESSION["user"])) {
+            return $this->view("admin/login.mvc.php");
+        } else {
+            return $this->view("admin/index.mvc.php", [
+                "page" => "pages",
+            ]);
         }
     }
 
     public function login(): Response
     {
         $data = [
-            "email" => $this->request->post['user-email'] ?? '',
-            "password" => $this->request->post['user-password'] ?? ''
+            "email" => $this->request->post["user-email"] ?? "",
+            "password" => $this->request->post["user-password"] ?? "",
         ];
         $responseData = [];
 
-        if($data['email'] == '' || $data['password'] == ''){
-                $responseData["error"] = "Molimo Vas da popunite sva polja!";
-                return $this->view("admin/login.mvc.php", [
-                    "errors" => $responseData["error"]
-                  ]);
+        if ($data["email"] == "" || $data["password"] == "") {
+            $responseData["error"] = "Molimo Vas da popunite sva polja!";
+            return $this->view("admin/login.mvc.php", [
+                "errors" => $responseData["error"],
+            ]);
         }
-        
-        $user = $this->model->checkIfUserExists($data['email'],$data['password']);
 
-        if(!empty($user)){
-            $_SESSION['user'] = $user;
+        $user = $this->model->checkIfUserExists(
+            $data["email"],
+            $data["password"]
+        );
+
+        if (!empty($user)) {
+            $_SESSION["user"] = $user;
             return $this->redirect("/NovaBalance/admin/index");
         } else {
             $responseData["error"] = "Korisnik nije pronadjen!";
             return $this->view("admin/login.mvc.php", [
-                "errors" => $responseData["error"]
-                ]);
+                "errors" => $responseData["error"],
+            ]);
         }
-
-        
     }
 
     public function logout(): Response
     {
-        unset($_SESSION['user']);
+        unset($_SESSION["user"]);
         return $this->redirect("/NovaBalance/admin/index");
     }
 }

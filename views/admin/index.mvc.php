@@ -10,8 +10,11 @@
         <!--begin::Footer-->
         {% include "admin/nav.php" %}
         {% include "admin/aside.php" %}
-
-        {% include "admin/app-main.mvc.php" %}
+        {% if ($page == "home"): %}
+            {% include "admin/app-main.mvc.php" %}
+        {% elseif ($page == "pages"): %}
+            {% include "admin/pages.mvc.php" %}
+        {% endif; %}
 
        {% include "admin/footer.php" %}
      </div>
