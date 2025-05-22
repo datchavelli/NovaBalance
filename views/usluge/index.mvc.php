@@ -8,7 +8,11 @@
 
 <div class="wrapper">
         <div class="container">
-            <?= $content ?>
+          {% foreach ($content as $cont): %}
+            <section id="<?= strtolower($cont['section_title']).'_'.$cont['section_id'] ?>">
+              <?= $cont['content'] ?> 
+            </section>
+          {% endforeach; %}
         </div>
     </div>
 

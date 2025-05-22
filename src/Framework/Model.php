@@ -91,8 +91,7 @@ abstract class Model
       return strtolower(array_pop($parts));
    }
 
-  public function __construct(protected Database $database)
-  {
+  public function __construct(protected Database $database) {
   }
 
    public function findAll():array 

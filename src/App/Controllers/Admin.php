@@ -7,10 +7,11 @@ use Framework\Controller;
 use Framework\Response;
 use App\Models\User;
 use App\Services\MailchimpService;
+use App\Models\Page;
 
 class Admin extends Controller
 {
-    public function __construct(private User $model) {}
+    public function __construct(private User $model, private Page $pages) {}
 
     public function index(): Response
     {
@@ -25,11 +26,14 @@ class Admin extends Controller
 
     public function pages(): Response
     {
-        if (!isset($_SESSION["user"])) {
+      $pages = $this->pages;
+      $pages = $pages->getPages();
+      if (!isset($_SESSION["user"])) {
             return $this->view("admin/login.mvc.php");
         } else {
             return $this->view("admin/index.mvc.php", [
                 "page" => "pages",
+                "pages" => $pages,
             ]);
         }
     }

@@ -7,8 +7,12 @@
 {% include "home/banner.mvc.php" %}
 
 <div class="wrapper">
-    <div class="container">
-        <?= $content ?>
+  <div class="container">
+    {% foreach ($content as $cont): %}
+      <section id="<?= strtolower($cont['section_title']).'_'.$cont['section_id'] ?>">
+          <?= $cont['content'] ?> 
+      </section>
+    {% endforeach; %}
     </div>
     <br>
     {% include "home/bannerFunc.mvc.php" %}

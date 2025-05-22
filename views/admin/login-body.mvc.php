@@ -2,7 +2,7 @@
   <body class="login-page bg-body-secondary">
     <div class="login-box">
       <div class="login-logo">
-        <a href="../index2.html"><b><b><span class="logo-style nova">Nova</span><span class="logo-style forma">Balance</span></b></b> Admin</a>
+        <a href="#"><b><b><span class="logo-style nova">Nova</span><span class="logo-style forma">Balance</span></b></b> Admin</a>
       </div>
       <!-- /.login-logo -->
       <div class="card">
