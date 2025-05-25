@@ -1,22 +1,19 @@
 {
   "files": {
-    "main.css": "/NovaBalance/public/react/static/css/main.255ed9cc.css",
-    "main.js": "/NovaBalance/public/react/static/js/main.4f85197a.js",
-    "static/js/453.358231aa.chunk.js": "/NovaBalance/public/react/static/js/453.358231aa.chunk.js",
-    "static/media/Podcast.png": "/NovaBalance/public/react/static/media/Podcast.c91edaffb8939ac81c9c.png",
-    "static/media/kontokosta_logo.png": "/NovaBalance/public/react/static/media/kontokosta_logo.9cb67b759d0441e48f25.png",
-    "static/media/NovaFormaSoftware.png": "/NovaBalance/public/react/static/media/NovaFormaSoftware.9b1be940b30d04ff185b.png",
-    "static/media/Projektovanje 01.png": "/NovaBalance/public/react/static/media/Projektovanje 01.b2e914d844f32bd3e2e9.png",
-    "static/media/Projektovanje 02.png": "/NovaBalance/public/react/static/media/Projektovanje 02.4151967c315afe639066.png",
-    "static/media/docloop.png": "/NovaBalance/public/react/static/media/docloop.cef113c399d6d5a1b579.png",
-    "static/media/Logo.webp": "/NovaBalance/public/react/static/media/Logo.fb53351ef57ae7a6f688.webp",
-    "index.html": "/NovaBalance/public/react/index.html",
-    "main.255ed9cc.css.map": "/NovaBalance/public/react/static/css/main.255ed9cc.css.map",
-    "main.4f85197a.js.map": "/NovaBalance/public/react/static/js/main.4f85197a.js.map",
-    "453.358231aa.chunk.js.map": "/NovaBalance/public/react/static/js/453.358231aa.chunk.js.map"
+    "main.css": "/react/static/css/main.255ed9cc.css",
+    "main.js": "/react/static/js/main.a851d676.js",
+    "static/js/453.358231aa.chunk.js": "/react/static/js/453.358231aa.chunk.js",
+    "static/media/Podcast.png": "/react/static/media/Podcast.c91edaffb8939ac81c9c.png",
+    "static/media/kontokosta_logo.png": "/react/static/media/kontokosta_logo.9cb67b759d0441e48f25.png",
+    "static/media/NovaFormaSoftware.png": "/react/static/media/NovaFormaSoftware.9b1be940b30d04ff185b.png",
+    "static/media/Logo.webp": "/react/static/media/Logo.fb53351ef57ae7a6f688.webp",
+    "index.html": "/react/index.html",
+    "main.255ed9cc.css.map": "/react/static/css/main.255ed9cc.css.map",
+    "main.a851d676.js.map": "/react/static/js/main.a851d676.js.map",
+    "453.358231aa.chunk.js.map": "/react/static/js/453.358231aa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.255ed9cc.css",
-    "static/js/main.4f85197a.js"
+    "static/js/main.a851d676.js"
   ]
 }

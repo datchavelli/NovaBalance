@@ -18,35 +18,45 @@ function Newsletter() {
         <h2 className="text-2xl md:text-3xl font-semibold">
           Kontaktirajte nas
         </h2>
-        <form className="flex flex-col gap-4">
+        <form
+          action="/home/contact"
+          method="post"
+          className="flex flex-col gap-4"
+        >
           <input
             type="text"
             placeholder="Ime/Naziv Firme"
+            name="cntc_name"
             className="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#a0258c]"
           />
           <input
             type="text"
             placeholder="Adresa"
+            name="cntc_address"
             className="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#a0258c]"
           />
           <input
             type="text"
             placeholder="Telefon"
+            name="cntc_phone"
             className="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#a0258c]"
           />
           <input
             type="mail"
             placeholder="Email"
+            name="cntc_email"
             className="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#a0258c]"
           />
           <input
             type="text"
             placeholder="PIB"
+            name="cntc_pib"
             className="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#a0258c]"
           />
           <textarea
             placeholder="Vaša poruka"
             rows="4"
+            name="cntc_message"
             className="px-4 py-2 border rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-[#a0258c]"
           ></textarea>
           <button

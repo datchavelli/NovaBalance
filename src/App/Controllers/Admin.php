@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace App\Controllers;
+
 use Framework\Controller;
 use Framework\Response;
 use App\Models\User;
@@ -11,7 +12,9 @@ use App\Models\Page;
 
 class Admin extends Controller
 {
-    public function __construct(private User $model, private Page $pages) {}
+    public function __construct(private User $model, private Page $pages)
+    {
+    }
 
     public function index(): Response
     {
@@ -26,9 +29,9 @@ class Admin extends Controller
 
     public function pages(): Response
     {
-      $pages = $this->pages;
-      $pages = $pages->getPages();
-      if (!isset($_SESSION["user"])) {
+        $pages = $this->pages;
+        $pages = $pages->getPages();
+        if (!isset($_SESSION["user"])) {
             return $this->view("admin/login.mvc.php");
         } else {
             return $this->view("admin/index.mvc.php", [
@@ -60,7 +63,7 @@ class Admin extends Controller
 
         if (!empty($user)) {
             $_SESSION["user"] = $user;
-            return $this->redirect("/NovaBalance/admin/index");
+            return $this->redirect("/admin/index");
         } else {
             $responseData["error"] = "Korisnik nije pronadjen!";
             return $this->view("admin/login.mvc.php", [
@@ -72,6 +75,6 @@ class Admin extends Controller
     public function logout(): Response
     {
         unset($_SESSION["user"]);
-        return $this->redirect("/NovaBalance/admin/index");
+        return $this->redirect("/admin/index");
     }
 }

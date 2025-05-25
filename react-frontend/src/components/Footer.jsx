@@ -10,39 +10,39 @@ function Footer() {
             <img src={logo} alt="logo" className="w-56 h-auto mb-4" />
             <div className="flex gap-4">
               <a href="">
-              <img
-                src="https://www.svgrepo.com/show/521725/linkedin.svg"
-                alt="LinkedIn"
-                className="w-8 h-8"
-              />
+                <img
+                  src="https://www.svgrepo.com/show/521725/linkedin.svg"
+                  alt="LinkedIn"
+                  className="w-8 h-8"
+                />
               </a>
               <a href="">
-              <img
-                src="https://www.svgrepo.com/show/521654/facebook.svg"
-                alt="Facebook"
-                className="w-8 h-8"
-              />
+                <img
+                  src="https://www.svgrepo.com/show/521654/facebook.svg"
+                  alt="Facebook"
+                  className="w-8 h-8"
+                />
               </a>
               <a href="">
-              <img
-                src="https://www.svgrepo.com/show/521711/instagram.svg"
-                alt="Instagram"
-                className="w-8 h-8"
-              />
+                <img
+                  src="https://www.svgrepo.com/show/521711/instagram.svg"
+                  alt="Instagram"
+                  className="w-8 h-8"
+                />
               </a>
               <a href="">
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/87/87409.png"
-                alt="Spotify"
-                className="w-8 h-8"
-              />
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/87/87409.png"
+                  alt="Spotify"
+                  className="w-8 h-8"
+                />
               </a>
               <a href="">
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/3669/3669688.png"
-                alt="YouTube"
-                className="w-8 h-8"
-              />
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/3669/3669688.png"
+                  alt="YouTube"
+                  className="w-8 h-8"
+                />
               </a>
             </div>
           </div>
@@ -86,9 +86,14 @@ function Footer() {
               Budite u toku sa najnovijim vestima, ponudama i unapređenjima
               našeg softvera.
             </p>
-            <form className="flex flex-col sm:flex-row sm:items-center gap-4">
+            <form
+              action="/home/subscribe"
+              method="post"
+              className="flex flex-col sm:flex-row sm:items-center gap-4"
+            >
               <input
                 type="email"
+                name="email"
                 placeholder="Unesite vaš email"
                 className="w-full sm:w-auto flex-1 px-4 py-2 rounded-xl text-black focus:outline-none focus:ring-2 focus:ring-hover-dark-pink"
               />

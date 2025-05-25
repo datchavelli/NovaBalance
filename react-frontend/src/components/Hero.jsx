@@ -1,6 +1,6 @@
 import React from "react";
 
-import SoftwareImage from "../assets/NovaFormaSoftware.png"
+import SoftwareImage from "../assets/NovaFormaSoftware.png";
 
 function Hero() {
   return (
@@ -26,13 +26,16 @@ function Hero() {
             saznajte šta sve NovaBalance može da uradi za vas.
           </p>
           <div className="flex flex-col sm:flex-row gap-2 font-merriweather">
-            <input
-              placeholder="Unesite svoj e-mail"
-              className="px-3 py-2 rounded-xl w-full sm:w-1/2 focus:outline-none focus:ring-2 focus:ring-hover-dark-pink"
-            />
-            <button className="px-5 py-2 rounded-xl max-w-[124px] transition bg-black hover:bg-hover-dark-pink text-white">
-              Prijavite se
-            </button>
+            <form action="/home/subscirbe" method="post">
+              <input
+                name="email"
+                placeholder="Unesite svoj e-mail"
+                className="px-3 py-2 rounded-xl w-full sm:w-1/2 focus:outline-none focus:ring-2 focus:ring-hover-dark-pink"
+              />
+              <button className="px-5 py-2 rounded-xl max-w-[124px] transition bg-black hover:bg-hover-dark-pink text-white">
+                Prijavite se
+              </button>
+            </form>
           </div>
         </div>
       </div>

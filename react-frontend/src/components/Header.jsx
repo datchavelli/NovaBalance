@@ -21,7 +21,7 @@ function Header() {
           <ul className="flex gap-6 lg:gap-12 justify-center items-center w-full">
             <li>
               <a
-                href="/NovaBalance/#about"
+                href="/#about"
                 className="hover:text-hover-pink transition font-bold tracking-[1px]"
               >
                 Benefiti
@@ -29,7 +29,7 @@ function Header() {
             </li>
             <li>
               <a
-                href="/NovaBalance/#about"
+                href="/#about"
                 className="hover:text-hover-pink transition font-bold tracking-[1px]"
               >
                 O nama
@@ -37,7 +37,7 @@ function Header() {
             </li>
             <li>
               <a
-                href="/NovaBalance/#functions"
+                href="/#functions"
                 className="hover:text-hover-pink transition font-bold tracking-[1px]"
               >
                 Funkcionalnosti
@@ -45,7 +45,7 @@ function Header() {
             </li>
             <li>
               <a
-                href="/NovaBalance/#services"
+                href="/#services"
                 className="hover:text-hover-pink transition font-bold tracking-[1px]"
               >
                 Usluge
@@ -53,7 +53,7 @@ function Header() {
             </li>
             {/* <li>
               <a
-                href="/NovaBalance/#contact"
+                href="/#contact"
                 className="hover:text-hover-pink transition font-bold"
               >
                 Kontakt
@@ -64,7 +64,7 @@ function Header() {
 
         {/* CTA Button (Desktop only) */}
         <div className="hidden custom:block">
-          <a href="/NovaBalance/#contact">
+          <a href="/#contact">
             <button className="px-5 py-2 rounded-xl transition bg-hover-pink hover:bg-hover-dark-pink text-white tracking-[1px]">
               Kontakt
             </button>
@@ -99,7 +99,7 @@ function Header() {
             <ul className="flex flex-col items-start gap-4">
               <li>
                 <a
-                  href="/NovaBalance/#about"
+                  href="/#about"
                   className="hover:text-hover-pink transition font-bold"
                 >
                   Benefiti
@@ -107,7 +107,7 @@ function Header() {
               </li>
               <li>
                 <a
-                  href="/NovaBalance/#about"
+                  href="/#about"
                   className="hover:text-hover-pink transition font-bold"
                 >
                   O nama
@@ -123,14 +123,14 @@ function Header() {
               </li>
               <li>
                 <a
-                  href="/NovaBalance/#services"
+                  href="/#services"
                   className="hover:text-hover-pink transition font-bold"
                 >
                   Usluge
                 </a>
               </li>
               <li>
-                <a href="/NovaBalance/#contact">
+                <a href="/#contact">
                   <button className="w-full mt-2 mb-4 px-5 py-2 rounded-xl transition bg-hover-pink hover:bg-hover-dark-pink text-white">
                     Newsletter
                   </button>

@@ -8,7 +8,7 @@
       <div class="card">
         <div class="card-body login-card-body">
           <p class="login-box-msg">Molimo Vas, prijavite se.</p>
-          <form action="/NovaBalance/admin/login" method="post">
+          <form action="/admin/login" method="post">
             <div class="input-group mb-3">
               <input type="email" class="form-control" id='user-email' name='user-email' placeholder="Email" required/>
               <div class="input-group-text"><span class="bi bi-envelope"></span></div>
@@ -41,7 +41,7 @@
         <!-- /.login-card-body -->
       </div>
       <div class="<?= isset($errors) ? "hidden" : "" ?> errors">
-        <?php if(isset($errors)): ?>
+        <?php if (isset($errors)): ?>
           <p><?= $errors ?></p>
         <?php unset($errors); endif; ?>
       </div>

@@ -12,7 +12,9 @@ use App\Services\MailchimpService;
 
 class Home extends Controller
 {
-    public function __construct(private Contact $model, private Page $page) {}
+    public function __construct(private Contact $model, private Page $page)
+    {
+    }
 
     public function index(): Response
     {
@@ -41,6 +43,7 @@ class Home extends Controller
             "phone" => $this->request->post["cntc_phone"] ?? "",
             "email" => $this->request->post["cntc_email"] ?? "",
             "pib" => $this->request->post["cntc_pib"] ?? "",
+            "message" => $this->request->post["cntc_message"] ?? "",
         ];
 
         if ($this->model->insert($data)) {
@@ -49,11 +52,12 @@ class Home extends Controller
             $subject = "NovaBalance Website | New Contact Form Submission";
             $body = "
                 <h3>New Contact Request</h3>
-                <p><strong>Name:</strong> {$data["name"]}</p>
+                <p><strong>Ime:</strong> {$data["name"]}</p>
                 <p><strong>Email:</strong> {$data["email"]}</p>
-                <p><strong>Phone:</strong> {$data["phone"]}</p>
-                <p><strong>Address:</strong> {$data["address"]}</p>
+                <p><strong>Telefon:</strong> {$data["phone"]}</p>
+                <p><strong>Adresa:</strong> {$data["address"]}</p>
                 <p><strong>PIB:</strong> {$data["pib"]}</p>
+                <p><strong>Poruka:</strong> {$data["message"]}</p>
             ";
 
             $emailSent = $mailer->send("dev@novabalance.rs", $subject, $body);
@@ -65,15 +69,13 @@ class Home extends Controller
                 $responseData["error"] = "Error Sending Mail!";
             }
 
-            return new Response(json_encode($responseData), 200, [
-                "Content-Type" => "application/json",
-            ]);
+            header("Content-Type: application/json");
+            echo json_encode($responseData);
+            exit;
         } else {
-            return new Response(
-                json_encode(["errors" => $this->model->getErrors()]),
-                400, // Bad Request
-                ["Content-Type" => "application/json"]
-            );
+            header("Content-Type: application/json");
+            echo json_encode(["errors" => $this->model->getErrors()]);
+            exit;
         }
     }
 
@@ -89,11 +91,11 @@ class Home extends Controller
         if ($result) {
             $mailer = new \App\Services\MailerService();
             $mailer->sendNewsletterConfirmation($data["email"]);
-            return $this->redirect("/NovaBalance/");
+            echo json_encode(["success" => "true","message" => "Subscribed!"]);
+            exit;
         } else {
-            return $this->view("home/index.mvc.php", [
-                "errors" => $result["error"],
-            ]);
+            echo json_encode(["sucess" => "false","message" => $result['error']]);
+            exit;
         }
     }
 }

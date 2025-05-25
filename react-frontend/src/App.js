@@ -8,8 +8,8 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Podcast from "./components/Podcast.jsx";
 import Newsletter from "./components/Newsletter.jsx";
-import Usluge from "./components/Usluge.jsx";
-import ModalWithForm from "./components/KontaktModal.jsx";
+// import Usluge from "./components/Usluge.jsx";
+// import ModalWithForm from "./components/KontaktModal.jsx";
 
 function App() {
   return (
@@ -19,7 +19,6 @@ function App() {
         className="min-h-screen flex flex-col font-lato overflow-x-hidden"
       >
         <Header />
-        <ModalWithForm />
         <Hero />
         <General />
         <About />
@@ -27,7 +26,6 @@ function App() {
         <Podcast />
         <Newsletter />
         <Footer />
-        <Usluge />
       </div>
     </>
   );
