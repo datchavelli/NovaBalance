@@ -6,7 +6,7 @@
           <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-              <div class="col-sm-6"><button class="btn btn-primary">:iconica Dodaj</button></div>
+              <div class="col-sm-6"><button class="btn btn-primary"><i class="ri-add-large-line"></i> Dodaj</button></div>
               </div>
             <!--end::Row-->
           </div>
@@ -60,7 +60,7 @@
                           <td><?= $page['title'] ?> </td>
                           <td><?= $page['slug'] ?></td>
                           <td><?= $page['created_at'] ?> </td>
-                          <td><button class="btn" data-id='<?= $page['id'] ?>'>:iconica</button><button class='btn btn-danger'data-id='<?= $page['id'] ?>'>X</button></td>
+                          <td><button class="btn" data-id='<?= $page['id'] ?>'><i class="ri-edit-line"></i></button><button class='btn btn-danger'data-id='<?= $page['id'] ?>'><i class="ri-close-large-line"></i></button></td>
                         </tr>
                         <?php endforeach; ?>
                       </tbody>
