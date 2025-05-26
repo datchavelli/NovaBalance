@@ -9,6 +9,7 @@ use Framework\Response;
 use App\Models\User;
 use App\Services\MailchimpService;
 use App\Models\Page;
+use App\Models\PageSection;
 
 class Admin extends Controller
 {
@@ -26,7 +27,22 @@ class Admin extends Controller
             ]);
         }
     }
-
+    public function page(): Response
+    {
+        $page_id = $this->request->get["page_id"];
+        $sections = $this->pages;
+        $page = $sections->getPage($page_id);
+        $sections = $sections->getPageSections($page_id);
+        if (!isset($_SESSION['user'])) {
+            return $this->view("admin/login.mvc.php");
+        } else {
+            return $this->view("admin/index.mvc.php", [
+            "page" => "page",
+            "sections" => $sections,
+            "page_name" => $page
+      ]);
+        }
+    }
     public function pages(): Response
     {
         $pages = $this->pages;

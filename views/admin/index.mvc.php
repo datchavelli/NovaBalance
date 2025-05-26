@@ -14,6 +14,8 @@
             {% include "admin/app-main.mvc.php" %}
         {% elseif ($page == "pages"): %}
             {% include "admin/pages.mvc.php" %}
+        {% elseif ($page == "page"): %}
+            {% include "admin/page.mvc.php" %}
         {% endif; %}
 
        {% include "admin/footer.php" %}
