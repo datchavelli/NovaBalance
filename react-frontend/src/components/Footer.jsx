@@ -1,7 +1,39 @@
 import React from "react";
 import logo from "../assets/Logo.webp";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Button from "../shared/Button";
+import Input from "../shared/Input";
 
 function Footer() {
+  const location = useLocation();
+  const isOnServicesPage = location.pathname === "/usluge";
+
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("home/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) throw new Error("Request failed");
+
+      setStatus("success");
+      setEmail("");
+    } catch (error) {
+      console.error("Subscription failed:", error);
+      setStatus("error");
+    }
+  };
+
   return (
     <footer className="w-full text-black">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 bg-[#debdda] px-24 py-10 lg:py-10">
