@@ -3,7 +3,7 @@ import Software from "../../assets/NovaFormaSoftware.png";
 
 const ServiceHero = () => {
   return (
-    <div className="flex flex-col gap-6 lg:flex-row items-center justify-between px-6 md:px-12 lg:px-12 xl:px-40  py-10 lg:py-20 bg-gradient-to-b from-[#debdda] to-[#ffe6ff]">
+    <div className="flex flex-col lg:h-[calc(100vh-100px)] gap-6 lg:flex-row items-center justify-between px-6 md:px-12 lg:px-12 xl:px-40  py-10 lg:py-20 bg-gradient-to-b from-[#debdda] to-[#ffe6ff]">
       
       {/* Text Content */}
       <div className="w-full lg:w-1/2 flex flex-col gap-6">
