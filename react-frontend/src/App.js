@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Pages/Home.jsx";
 import ContactModal from "./components/Modal.jsx";
-import Usluge from './components/Services/Usluge.jsx'
+import ServicesPage from "./components/Pages/Services.jsx";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <ContactModal />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/usluge" element={<Usluge />} />
+          <Route path="/usluge" element={<ServicesPage />} />
         </Routes>
         <Footer />
       </div>

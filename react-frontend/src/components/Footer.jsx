@@ -2,15 +2,15 @@ import React from "react";
 import logo from "../assets/Logo.webp";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Button from "./Button";
-import Input from "./Input";
+import Button from "../shared/Button";
+import Input from "../shared/Input";
 
 function Footer() {
   const location = useLocation();
   const isOnServicesPage = location.pathname === "/usluge";
 
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState(null); // success, error, or null
+  const [status, setStatus] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
