@@ -1,4 +1,3 @@
-// components/ScrollToTopButton.tsx
 import { useEffect, useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
 
