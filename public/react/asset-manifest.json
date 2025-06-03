@@ -1,19 +1,26 @@
 {
   "files": {
-    "main.css": "/react/static/css/main.255ed9cc.css",
-    "main.js": "/react/static/js/main.a851d676.js",
+    "main.css": "/react/static/css/main.47f644be.css",
+    "main.js": "/react/static/js/main.3eb4b87a.js",
     "static/js/453.358231aa.chunk.js": "/react/static/js/453.358231aa.chunk.js",
     "static/media/Podcast.png": "/react/static/media/Podcast.c91edaffb8939ac81c9c.png",
-    "static/media/kontokosta_logo.png": "/react/static/media/kontokosta_logo.9cb67b759d0441e48f25.png",
     "static/media/NovaFormaSoftware.png": "/react/static/media/NovaFormaSoftware.9b1be940b30d04ff185b.png",
+    "static/media/Projektovanje 01.jpg": "/react/static/media/Projektovanje 01.9da4db67ee4e1f654c9f.jpg",
+    "static/media/Consult.jpg": "/react/static/media/Consult.59148118f801f254bee5.jpg",
+    "static/media/Carousel4.jpg": "/react/static/media/Carousel4.0e4641cf9e566f33f415.jpg",
+    "static/media/superheroN.webp": "/react/static/media/superheroN.a863ce014c4b0be07077.webp",
+    "static/media/Carousel2.jpg": "/react/static/media/Carousel2.0a2588ec91a90fa0926b.jpg",
+    "static/media/Carousel1.jpg": "/react/static/media/Carousel1.29ab221906b67d88babb.jpg",
+    "static/media/Course.jpg": "/react/static/media/Course.94294a0f292cf02296f8.jpg",
+    "static/media/docloop.png": "/react/static/media/docloop.cef113c399d6d5a1b579.png",
     "static/media/Logo.webp": "/react/static/media/Logo.fb53351ef57ae7a6f688.webp",
     "index.html": "/react/index.html",
-    "main.255ed9cc.css.map": "/react/static/css/main.255ed9cc.css.map",
-    "main.a851d676.js.map": "/react/static/js/main.a851d676.js.map",
+    "main.47f644be.css.map": "/react/static/css/main.47f644be.css.map",
+    "main.3eb4b87a.js.map": "/react/static/js/main.3eb4b87a.js.map",
     "453.358231aa.chunk.js.map": "/react/static/js/453.358231aa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.255ed9cc.css",
-    "static/js/main.a851d676.js"
+    "static/css/main.47f644be.css",
+    "static/js/main.3eb4b87a.js"
   ]
 }
