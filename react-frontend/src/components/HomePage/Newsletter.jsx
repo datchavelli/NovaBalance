@@ -24,10 +24,7 @@ function Newsletter() {
     try {
       const response = await fetch("home/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        body: formData,
       });
 
       if (!response.ok) throw new Error("Error submitting form");
