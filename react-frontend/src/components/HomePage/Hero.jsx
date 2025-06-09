@@ -14,10 +14,7 @@ function Hero() {
     try {
       const response = await fetch("home/subscribe", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
+        body: email,
       });
 
       if (!response.ok) throw new Error("Request failed");
