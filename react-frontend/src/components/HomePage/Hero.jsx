@@ -12,7 +12,7 @@ function Hero() {
     e.preventDefault();
 
     try {
-      const response = await fetch("home/subscribe", {
+      const response = await fetch("/home/subscribe", {
         method: "POST",
         body: email,
       });

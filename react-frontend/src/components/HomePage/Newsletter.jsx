@@ -22,7 +22,7 @@ function Newsletter() {
     e.preventDefault();
 
     try {
-      const response = await fetch("home/contact", {
+      const response = await fetch("/home/contact", {
         method: "POST",
         body: formData,
       });
@@ -45,7 +45,10 @@ function Newsletter() {
   };
 
   return (
-    <div id="contact" className="flex flex-col md:flex-row gap-12 px-6 md:px-12 lg:pt-6 lg:px-20 xl:px-40 pb-24 items-center justify-between">
+    <div
+      id="contact"
+      className="flex flex-col md:flex-row gap-12 px-6 md:px-12 lg:pt-6 lg:px-20 xl:px-40 pb-24 items-center justify-between"
+    >
       <div className="flex flex-col items-start gap-4 w-full md:w-1/2">
         <span className="bg-[#fbe2fb] rounded-xl px-3 py-1 text-sm">
           Kontaktirajte nas
@@ -58,7 +61,9 @@ function Newsletter() {
       </div>
 
       <div className="w-full md:w-1/2 flex flex-col justify-center gap-6">
-        <h2 className="text-2xl md:text-3xl font-semibold">Kontaktirajte nas</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold">
+          Kontaktirajte nas
+        </h2>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <Input

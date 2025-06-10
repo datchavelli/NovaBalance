@@ -55,7 +55,7 @@ function Footer() {
           <div className="flex flex-col items-start">
             <img src={logo} alt="logo" className="w-56 h-auto mb-4" />
             <div className="flex gap-4">
-              <a href="">
+              <a href="https://www.linkedin.com/company/novabalance/">
                 <img
                   src="https://www.svgrepo.com/show/521725/linkedin.svg"
                   alt="LinkedIn"
@@ -69,21 +69,21 @@ function Footer() {
                   className="w-8 h-8"
                 />
               </a>
-              <a href="">
+              <a href="https://www.instagram.com/novabalancesoftware/">
                 <img
                   src="https://www.svgrepo.com/show/521711/instagram.svg"
                   alt="Instagram"
                   className="w-8 h-8"
                 />
               </a>
-              <a href="">
+              <a href="https://open.spotify.com/show/2uFoVB4oUtIASJ2wLcaFk6">
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/87/87409.png"
                   alt="Spotify"
                   className="w-8 h-8"
                 />
               </a>
-              <a href="">
+              <a href="https://youtube.com/https://www.youtube.com/@NovaBalanceYT">
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/3669/3669688.png"
                   alt="YouTube"
