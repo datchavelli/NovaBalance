@@ -1,17 +1,13 @@
 import React from "react";
-
 import Hero from "../../assets/superheroN.webp";
 
 function About() {
   return (
-    <div id="about" className="scroll-mt-52 flex flex-col lg:flex-row gap-10 px-6 md:px-12 lg:px-20 xl:px-40 py-24 items-center bg-white">
-      <div className="w-full lg:w-1/2">
-        <img
-          src={Hero}
-          alt="Accounting Image"
-          className="w-full max-w-[500px] mx-auto rounded-xl"
-        />
-      </div>
+    <div
+      id="about"
+      className="scroll-mt-52 flex flex-col lg:flex-row-reverse gap-10 px-6 md:px-12 lg:px-20 xl:px-40 py-24 items-center bg-white"
+    >
+      {/* Text Section */}
       <div className="w-full lg:w-1/2 flex flex-col gap-4">
         <h2 className="text-2xl md:text-3xl font-semibold">
           Nova<span className="text-hover-dark-pink font-bold">Balance</span>{" "}
@@ -34,6 +30,15 @@ function About() {
           dostupnim, jednostavnim i bez stresa. Upoznajte nas bolje i saznajte
           šta nas pokreće.
         </p>
+      </div>
+
+      {/* Image Section */}
+      <div className="w-full lg:w-1/2">
+        <img
+          src={Hero}
+          alt="Accounting Image"
+          className="w-full max-w-[500px] mx-auto rounded-xl"
+        />
       </div>
     </div>
   );

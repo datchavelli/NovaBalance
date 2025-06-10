@@ -83,7 +83,7 @@ function Hero() {
         <img
           src={SoftwareImage}
           alt="Accounting Image"
-          className="w-full rounded-xl"
+          className="w-full"
         />
       </div>
     </div>

@@ -20,12 +20,12 @@ export default function ScrollToTopButton() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-6 right-6 z-50 p-3 rounded-full bg-hover-pink text-white shadow-lg transition-opacity duration-300 hover:bg-hover-dark-pink ${
-        visible ? "opacity-100" : "opacity-0 pointer-events-none"
-      }`}
+      className={`fixed z-50 p-3 rounded-full bg-hover-pink text-white shadow-lg transition-opacity duration-300 hover:bg-hover-dark-pink
+    ${visible ? "opacity-100" : "opacity-0 pointer-events-none"}
+    bottom-[clamp(24px,10vh,80px)] right-6`}
       aria-label="Scroll to top"
     >
-      <FaArrowCircleUp />
+      <FaArrowCircleUp className="text-2xl" />
     </button>
   );
 }

@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import Input from "./Input";
+import { MdClose } from "react-icons/md";
 
 const ContactModal = ({ isOpen, onClose }) => {
   const modalRef = useRef(null);
@@ -104,8 +105,17 @@ const ContactModal = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 px-4">
       <div
         ref={modalRef}
-        className="bg-white rounded-xl p-4 sm:p-6 w-full max-w-2xl shadow-lg overflow-y-auto max-h-[90vh]"
+        className="relative bg-white rounded-xl p-4 sm:p-6 w-full max-w-2xl shadow-lg overflow-y-auto max-h-[90vh]"
       >
+        {/* Mobile Close Button (X) */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4  rounded-xl p-0.5 text-gray-500 hover:text-hover-dark-pink focus:outline-none sm:hidden"
+          aria-label="Zatvori modal"
+        >
+          <MdClose className="bg-hover-pink rounded-xl p-1 text-white text-xl" />
+        </button>
+
         <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-gray-800 text-center">
           Kontakt
         </h2>
