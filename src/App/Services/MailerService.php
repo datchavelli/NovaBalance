@@ -38,6 +38,8 @@ class MailerService
     public function send(string $to, string $subject, string $body): bool
     {
         try {
+
+            $this->mail->CharSet = 'UTF-8';
             $this->mail->addAddress($to);
             $this->mail->Subject = $subject;
             $this->mail->Body = $body;
@@ -53,6 +55,7 @@ class MailerService
     public function sendNewsletterConfirmation(string $to): bool
     {
         try {
+            $this->mail->CharSet = 'UTF-8';
             $this->mail->addAddress($to);
             $this->mail->Subject = "Uspešna prijava na Newsletter";
             $this->mail->isHTML(true);
