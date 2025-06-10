@@ -41,9 +41,9 @@ class MailerService
 
             $this->mail->CharSet = 'UTF-8';
             $this->mail->Encoding = 'base64';
+            $this->mail->Subject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
 
             $this->mail->addAddress($to);
-            $this->mail->Subject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
             $this->mail->Body = $body;
             $this->mail->isHTML(true);
 

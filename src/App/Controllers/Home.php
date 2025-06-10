@@ -105,12 +105,12 @@ class Home extends Controller
                 <p><strong>Email:</strong> {$data["email"]}</p>
                 <p><strong>Oragnizacija:</strong> {$data["organizacija"]}</p>
                 <p><strong>Telefon:</strong> {$data["telefon"]}</p>
-                <p><strong>Poštanski Broj:</strong> {$data["postanskiBroj"]}</p>
+                <p><strong>Postanski Broj:</strong> {$data["postanskiBroj"]}</p>
                 <p><strong>Grad:</strong> {$data["grad"]}</p>
-                <p><strong>Država:</strong> {$data["drzava"]}</p>
+                <p><strong>Drzava:</strong> {$data["drzava"]}</p>
                 <p><strong>Adresa:</strong> {$data["adresa"]}</p>
                 <p><strong>PIB:</strong> {$data["pib"]}</p>
-                <p><strong>Matični Broj:</strong> {$data["maticniBroj"]}</p>
+                <p><strong>Maticni Broj:</strong> {$data["maticniBroj"]}</p>
             ";
 
             $emailSent = $mailer->send("dev@novabalance.rs", $subject, $body);

@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/react/static/css/main.47f644be.css",
-    "main.js": "/react/static/js/main.a240487f.js",
+    "main.css": "/react/static/css/main.b2893eb0.css",
+    "main.js": "/react/static/js/main.e06335c9.js",
     "static/js/453.358231aa.chunk.js": "/react/static/js/453.358231aa.chunk.js",
     "static/media/Podcast.png": "/react/static/media/Podcast.c91edaffb8939ac81c9c.png",
-    "static/media/NovaFormaSoftware.png": "/react/static/media/NovaFormaSoftware.9b1be940b30d04ff185b.png",
-    "static/media/Projektovanje 01.jpg": "/react/static/media/Projektovanje 01.9da4db67ee4e1f654c9f.jpg",
+    "static/media/NovaFormaSoftware.png": "/react/static/media/NovaFormaSoftware.fd90e67ce4aeef234f87.png",
     "static/media/Consult.jpg": "/react/static/media/Consult.59148118f801f254bee5.jpg",
     "static/media/Carousel4.jpg": "/react/static/media/Carousel4.0e4641cf9e566f33f415.jpg",
     "static/media/superheroN.webp": "/react/static/media/superheroN.a863ce014c4b0be07077.webp",
+    "static/media/Projektovanje01.png": "/react/static/media/Projektovanje01.b2e914d844f32bd3e2e9.png",
     "static/media/Carousel2.jpg": "/react/static/media/Carousel2.0a2588ec91a90fa0926b.jpg",
     "static/media/Carousel1.jpg": "/react/static/media/Carousel1.29ab221906b67d88babb.jpg",
     "static/media/Course.jpg": "/react/static/media/Course.94294a0f292cf02296f8.jpg",
     "static/media/docloop.png": "/react/static/media/docloop.cef113c399d6d5a1b579.png",
     "static/media/Logo.webp": "/react/static/media/Logo.fb53351ef57ae7a6f688.webp",
     "index.html": "/react/index.html",
-    "main.47f644be.css.map": "/react/static/css/main.47f644be.css.map",
-    "main.a240487f.js.map": "/react/static/js/main.a240487f.js.map",
+    "main.b2893eb0.css.map": "/react/static/css/main.b2893eb0.css.map",
+    "main.e06335c9.js.map": "/react/static/js/main.e06335c9.js.map",
     "453.358231aa.chunk.js.map": "/react/static/js/453.358231aa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.47f644be.css",
-    "static/js/main.a240487f.js"
+    "static/css/main.b2893eb0.css",
+    "static/js/main.e06335c9.js"
   ]
 }
