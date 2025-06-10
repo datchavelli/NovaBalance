@@ -40,8 +40,10 @@ class MailerService
         try {
 
             $this->mail->CharSet = 'UTF-8';
+            $this->mail->Encoding = 'base64';
+
             $this->mail->addAddress($to);
-            $this->mail->Subject = $subject;
+            $this->mail->Subject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
             $this->mail->Body = $body;
             $this->mail->isHTML(true);
 
@@ -56,8 +58,9 @@ class MailerService
     {
         try {
             $this->mail->CharSet = 'UTF-8';
+            $this->mail->Encoding = 'base64';
+            $this->mail->Subject = '=?UTF-8?B?' . base64_encode('Uspešna prijava na Newsletter') . '?=';
             $this->mail->addAddress($to);
-            $this->mail->Subject = "Uspešna prijava na Newsletter";
             $this->mail->isHTML(true);
             $this->mail->Body = "
                    <h3>Uspešno ste se prijavili!</h3>
