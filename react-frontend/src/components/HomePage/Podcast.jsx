@@ -3,7 +3,10 @@ import podcast from "../../assets/Podcast.png";
 
 function Podcast() {
   return (
-    <div id="podcast" className="flex flex-col md:flex-row gap-12 px-6 md:px-12 lg:px-20 xl:px-40 py-24 items-center justify-between">
+    <div
+      id="podcast"
+      className="flex flex-col md:flex-row gap-12 px-6 md:px-12 lg:px-20 xl:px-40 py-24 items-center justify-between"
+    >
       <div className="w-full md:w-1/2 flex justify-center">
         <img
           src={podcast}
@@ -23,9 +26,12 @@ function Podcast() {
           Saznajte kako digitalni alati menjaju način na koji poslujete.
           Automatizacija, efikasnost i priče iz prakse - sve na jednom mestu.
         </p>
-        <button className="bg-[#a0258c] text-white px-6 py-2 rounded-xl hover:bg-hover-dark-pink transition">
+        <a
+          href="https://open.spotify.com/show/2uFoVB4oUtIASJ2wLcaFk6"
+          className="bg-[#a0258c] text-white px-6 py-2 rounded-xl hover:bg-hover-dark-pink transition"
+        >
           Slušajte sada
-        </button>
+        </a>
       </div>
     </div>
   );

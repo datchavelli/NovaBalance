@@ -83,7 +83,7 @@ function Footer() {
                   className="w-8 h-8"
                 />
               </a>
-              <a href="https://youtube.com/https://www.youtube.com/@NovaBalanceYT">
+              <a href="https://www.youtube.com/@NovaBalanceYT">
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/3669/3669688.png"
                   alt="YouTube"

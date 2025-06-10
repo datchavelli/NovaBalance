@@ -9,10 +9,11 @@ use Framework\Response;
 use App\Models\Contact;
 use App\Models\Page;
 use App\Services\MailchimpService;
+use App\Models\Offer;
 
 class Home extends Controller
 {
-    public function __construct(private Contact $model, private Page $page)
+    public function __construct(private Contact $model, private Offer $offer, private Page $page)
     {
     }
 
@@ -78,7 +79,7 @@ class Home extends Controller
             exit;
         }
     }
-    public function offer(): Response
+    public function ponuda(): Response
     {
         $data = [
           'ime' => $this->request->post['ime'],
@@ -93,20 +94,21 @@ class Home extends Controller
           'pib' => $this->request->post['pib'],
           'maticniBroj' => $this->request->post['maticniBroj']
           ];
-        if ($this->model->insert($data)) {
+        if ($this->offer->insert($data)) {
             // ✅ Send Email
             $mailer = new \App\Services\MailerService();
             $subject = "NovaBalance Website | New Quote Form Submission";
             $body = "
                 <h3>New Contact Request</h3>
-                <p><strong>Ime:</strong> {$data["name"]}</p>
+                <p><strong>Ime:</strong> {$data["ime"]}</p>
+                <p><strong>Prezime:</strong> {$data["prezime"]}</p>
                 <p><strong>Email:</strong> {$data["email"]}</p>
                 <p><strong>Oragnizacija:</strong> {$data["organizacija"]}</p>
-                <p><strong>Telefon:</strong> {$data["phone"]}</p>
+                <p><strong>Telefon:</strong> {$data["telefon"]}</p>
                 <p><strong>Poštanski Broj:</strong> {$data["postanskiBroj"]}</p>
                 <p><strong>Grad:</strong> {$data["grad"]}</p>
                 <p><strong>Država:</strong> {$data["drzava"]}</p>
-                <p><strong>Adresa:</strong> {$data["address"]}</p>
+                <p><strong>Adresa:</strong> {$data["adresa"]}</p>
                 <p><strong>PIB:</strong> {$data["pib"]}</p>
                 <p><strong>Matični Broj:</strong> {$data["maticniBroj"]}</p>
             ";
@@ -135,16 +137,17 @@ class Home extends Controller
         $data = [
             "email" => $this->request->post["email"],
         ];
-
         $mailchimp = new MailchimpService();
         $result = $mailchimp->addSubscriber($data);
 
         if ($result) {
             $mailer = new \App\Services\MailerService();
             $mailer->sendNewsletterConfirmation($data["email"]);
+            header("Content-Type: application/json");
             echo json_encode(["success" => "true","message" => "Subscribed!"]);
             exit;
         } else {
+            header("Content-Type: application/json");
             echo json_encode(["sucess" => "false","message" => $result['error']]);
             exit;
         }

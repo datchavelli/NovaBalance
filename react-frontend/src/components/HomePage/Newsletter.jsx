@@ -21,10 +21,17 @@ function Newsletter() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const form = new FormData();
+    form.append("cntc_name", formData.name);
+    form.append("cntc_address", formData.address);
+    form.append("cntc_phone", formData.phone);
+    form.append("cntc_email", formData.email);
+    form.append("cntc_pib", formData.pib);
+    form.append("cntc_message", formData.message);
     try {
       const response = await fetch("/home/contact", {
         method: "POST",
-        body: formData,
+        body: form,
       });
 
       if (!response.ok) throw new Error("Error submitting form");

@@ -10,11 +10,12 @@ function Hero() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    const form = new FormData();
+    form.append("email", email);
     try {
       const response = await fetch("/home/subscribe", {
         method: "POST",
-        body: email,
+        body: form,
       });
 
       if (!response.ok) throw new Error("Request failed");
@@ -58,6 +59,7 @@ function Hero() {
             >
               <input
                 type="email"
+                id="hero_email"
                 placeholder="Unesite svoj e-mail"
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full sm:w-auto min-w-[300px] flex-1 px-4 py-2 rounded-xl text-black focus:outline-none focus:ring-2 focus:ring-hover-dark-pink"

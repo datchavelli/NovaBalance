@@ -41,10 +41,23 @@ const ContactModal = ({ isOpen, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const form = new FormData();
+    form.append("ime", formData.ime);
+    form.append("prezime", formData.prezime);
+    form.append("email", formData.email);
+    form.append("organizacija", formData.organizacija);
+    form.append("telefon", formData.telefon);
+    form.append("postanskiBroj", formData.postanskiBroj);
+    form.append("grad", formData.grad);
+    form.append("drzava", formData.drzava);
+    form.append("adresa", formData.adresa);
+    form.append("pib", formData.pib);
+    form.append("maticniBroj", formData.maticniBroj);
+
     try {
       const response = await fetch("home/ponuda", {
         method: "POST",
-        body: formData,
+        body: form,
       });
 
       if (!response.ok) throw new Error("Network response was not ok");
