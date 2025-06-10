@@ -62,7 +62,7 @@ function Newsletter() {
         </span>
         <h2 className="text-2xl md:text-3xl">Tu smo za sva Vaša pitanja!</h2>
         <p className="font-merriweather text-sm md:text-base">
-          Ukoliko imate pitanje, predlog, komentar ili upit, pošaljite nam
+          Ukoliko imate pitanje, predlog ili komentar, pošaljite nam
           poruku – odgovaramo brzo!
         </p>
       </div>
@@ -123,7 +123,7 @@ function Newsletter() {
             type="submit"
             className="bg-hover-pink text-white px-6 py-2 rounded-xl hover:bg-hover-dark-pink transition"
           >
-            Pošalji poruku
+            Pošaljite poruku
           </button>
 
           {status === "success" && (

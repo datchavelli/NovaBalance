@@ -16,17 +16,23 @@ function Header() {
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      const yOffset = -120;
+      const y =
+        el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+      window.scrollTo({ top: y, behavior: "smooth" });
+  
       setIsMenuOpen(false);
     }
   };
 
   return (
     <header className="top-0 left-0 w-full z-50 bg-white border-b border-gray-400 shadow-sm">
-      <div className="flex flex-wrap items-center justify-between gap-6 px-4 custom:px-10 ">
+      <div
+        className={`flex flex-wrap items-center justify-between gap-6 px-4 custom:px-10 ${
+          isMenuOpen ? "gap-3" : "gap-6"
+        }`}
+      >
         {/* Logo */}
         <Link to="/" className="shrink-0">
           <img src={logo} alt="logo" className="w-36 md:w-44" />
@@ -83,22 +89,22 @@ function Header() {
         {/* CTA Button (Desktop only) */}
         {!isOnServicesPage && (
           <div className="hidden custom:block">
-            <Button
-              name="Kontakt"
+            <button
+              className="px-5 py-2 rounded-xl transition bg-hover-pink hover:bg-hover-dark-pink text-white cursor-pointer w-[135px]"
               color="hover-pink"
               onClick={() => scrollToSection("contact")}
-            />
+            >Kontakt</button>
           </div>
         )}
 
         {!isOnServicesPage && (
           <>
             {/* Mobile Menu Button */}
-            <div className="custom:hidden ml-auto">
+            <div className={`${isMenuOpen ? "ml-2" : "ml-auto"} custom:hidden`}>
               <button
                 onClick={toggleMenu}
                 className="text-gray-800 focus:outline-none"
-                aria-label="Open menu"
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               >
                 <svg
                   className="w-6 h-6"
@@ -118,13 +124,14 @@ function Header() {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-              <div className="w-full mt-4 custom:hidden">
-                <ul className="flex flex-col items-start gap-4">
+              <div className="w-full custom:hidden pb-6">
+                <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2">
                   {[
                     { label: "Benefiti", section: "general" },
                     { label: "O nama", section: "about" },
                     { label: "Funkcionalnosti", section: "functionality" },
                     { label: "Podcast", section: "podcast" },
+                    { label: "Kontakt", section: "contact" },
                   ].map(({ label, section }) => (
                     <li key={section}>
                       <button

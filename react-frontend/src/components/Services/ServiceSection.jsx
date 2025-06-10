@@ -3,7 +3,7 @@ import React from "react";
 import docloop from "../../assets/docloop.png";
 import Consult from "../../assets/Consult.jpg";
 import Course from "../../assets/Course.jpg";
-import Projektovanje1 from "../../assets/Projektovanje 01.jpg";
+import Projektovanje1 from "../../assets/Projektovanje01.png";
 
 const ServiceSection = () => {
   return (
@@ -25,17 +25,16 @@ const ServiceSection = () => {
 
         <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-10 lg:gap-12 relative z-10 ">
           {/* Text Card */}
-          <div className="w-full lg:w-1/2 p-4 md:p-6 bg-white shadow-lg h-[300px] rounded-xl bg-gradient-to-b from-[#debdda] to-[#ffe6ff]">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
+          <div className="w-full lg:w-1/2 p-4 md:p-6 bg-white shadow-lg lg:min-h-[300px] rounded-xl bg-gradient-to-b from-[#debdda] to-[#ffe6ff]">            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
               Nova<span className="text-hover-dark-pink font-bold">Forma</span>{" "}
               – Računovodstveni softver
             </h2>
-            <p className="font-merriweather mt-4 text-sm sm:text-base">
+            <p className="font-merriweather mt-3 text-sm sm:text-base">
               Savremeno rešenje za lako upravljanje finansijama, izveštajima i
               poreskim obavezama. Pojednostavite računovodstvo i osigurajte
               preciznost svojih finansijskih podataka.
             </p>
-            <ul className="list-disc pl-4 sm:pl-5 text-sm sm:text-base mt-4 font-merriweather">
+            <ul className="list-disc pl-4 sm:pl-5 text-sm sm:text-base mt-3 font-merriweather">
               <li>Optimizacija računovodstvenih procesa</li>
               <li>Brzo i jednostavno upravljanje finansijama</li>
               <li>Poreska usklađenost bez stresa</li>
@@ -71,16 +70,16 @@ const ServiceSection = () => {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row-reverse items-center gap-10 relative z-10">
-          <div className="w-full lg:w-1/2 p-6 h-[300px] bg-gradient-to-b from-[#debdda] to-[#ffe6ff] shadow-lg rounded-xl">
+        <div className="w-full lg:w-1/2 p-4 md:p-6 bg-white shadow-lg lg:min-h-[300px] rounded-xl bg-gradient-to-b from-[#debdda] to-[#ffe6ff]">
             <h2 className="text-2xl md:text-3xl font-semibold">
               Docloop DMS i Arhivska knjiga
             </h2>
-            <p className="font-merriweather mt-4">
+            <p className="font-merriweather mt-3">
               Kao dugogodišnji partner Docloop-a iz Beograda, nudimo podršku pri
               implementaciji MojDMS sistema – digitalnog rešenja za upravljanje
               dokumentacijom.
             </p>
-            <ul className="list-disc pl-5 mt-4 font-merriweather">
+            <ul className="list-disc pl-5 mt-3 font-merriweather">
               <li>Digitalna obrada, evidencija i arhiviranje dokumentacije</li>
               <li>Automatizacija radnih procesa</li>
               <li>Pomoć pri dobijanju saglasnosti od Istorijskog Arhiva</li>
@@ -98,7 +97,7 @@ const ServiceSection = () => {
               Povezani sistemi
             </h1>
 
-            <div className="flex flex-wrap justify-center h-[194px] items-center gap-6 w-full ">
+            <div className="flex flex-wrap justify-center lg:h-[194px] items-center gap-6 w-full ">
               <a
                 href="https://www.mojdms.rs"
                 target="_blank"
@@ -147,16 +146,16 @@ const ServiceSection = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-10 relative z-10">
-          <div className="w-full lg:w-1/2 p-6 h-[300px] bg-gradient-to-b from-[#debdda] to-[#ffe6ff] shadow-lg rounded-xl">
+        <div className="w-full lg:w-1/2 p-4 md:p-6 bg-white shadow-lg lg:min-h-[300px] rounded-xl bg-gradient-to-b from-[#debdda] to-[#ffe6ff]">
             <h2 className="text-2xl md:text-3xl font-semibold">
               Konsultantske usluge za optimizaciju poslovanja
             </h2>
-            <p className="font-merriweather mt-4">
+            <p className="font-merriweather mt-3">
               Pomozite svom timu da postane efikasniji uz naše konsultantske
               usluge. Optimizujte poslovne procese, smanjite troškove i
               poboljšajte operativnu efikasnost.
             </p>
-            <ul className="list-disc pl-5 mt-4 font-merriweather">
+            <ul className="list-disc pl-5 mt-3 font-merriweather">
               <li>Analiza i optimizacija poslovnih procesa</li>
               <li> Strateško planiranje i dokumentacija</li>
               <li>Jasna kontrola resursa i troškova</li>
@@ -188,15 +187,15 @@ const ServiceSection = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row-reverse items-center gap-10 relative z-10">
-          <div className="w-full lg:w-1/2 p-6 lg:p-3 xl:p-6 bg-white shadow-lg rounded-xl bg-gradient-to-b from-[#debdda] to-[#ffe6ff]">
+        <div className="w-full lg:w-1/2 p-4 md:p-6 bg-white shadow-lg lg:min-h-[300px] rounded-xl bg-gradient-to-b from-[#debdda] to-[#ffe6ff]">
             <h2 className="text-2xl md:text-3xl font-semibold">
               Stručne obuke iz oblasti računovodstva
             </h2>
-            <p className="font-merriweather mt-4">
+            <p className="font-merriweather mt-3">
               Osnažite svoj tim praktičnim znanjima iz oblasti računovodstva,
               prilagođenim vašim potrebama.
             </p>
-            <ul className="list-disc pl-5 text-base mt-4 font-merriweather">
+            <ul className="list-disc pl-5 text-base mt-3 font-merriweather">
               <li> Osnove računovodstva i knjigovodstva</li>
               <li> Upravljanje zalihama i materijalima</li>
               <li> Fiskalizacija i poreske obaveze</li>
@@ -215,7 +214,7 @@ const ServiceSection = () => {
             <img
               src={Course}
               alt="Edukacija i obuka"
-              className="w-full  max-h-[300px] rounded-xl"
+              className="w-full max-h-[300px] rounded-xl"
             />
           </div>
         </div>

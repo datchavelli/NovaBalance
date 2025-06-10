@@ -54,21 +54,10 @@ function General() {
       {/* Mobile Carousel */}
       <div className="lg:hidden flex flex-col items-center mt-12">
         <img
-          src={images[activeIndex]}
-          alt={`carousel-${activeIndex}`}
-          className="w-full lg:w-72 h-72 object-cover rounded-xl shadow-md transition-all duration-300"
+          src={Carousel1}
+          alt="software-mobile"
+          className="w-full h-72 object-cover rounded-xl shadow-md"
         />
-        <div className="flex mt-4 gap-2">
-          {images.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setActiveIndex(i)}
-              className={`w-3 h-3 rounded-full ${
-                activeIndex === i ? "bg-[#a0258c]" : "bg-gray-300"
-              }`}
-            ></button>
-          ))}
-        </div>
       </div>
     </div>
   );

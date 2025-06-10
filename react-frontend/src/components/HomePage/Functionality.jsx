@@ -22,7 +22,7 @@ function Functionality() {
         </p>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 px-4">
-          <div className="p-6 rounded-xl text-white text-center w-full md:w-1/3 min-h-[200px] flex flex-col items-center justify-center bg-gradient-to-t from-[#a1258d] to-[#b266a9] ">
+          <div className="p-6 rounded-xl text-white text-center w-full md:w-1/3 min-h-[200px] flex flex-col items-center justify-center bg-gradient-to-t from-[#912585] to-[#b266a9] ">
             <h3 className="text-lg md:text-xl font-bold">
               Automatizovani obračuni
             </h3>

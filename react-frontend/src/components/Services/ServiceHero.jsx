@@ -22,7 +22,7 @@ const ServiceHero = () => {
         <img
           src={Software}
           alt="Accounting Software"
-          className="w-full h-auto rounded-xl shadow-lg object-contain"
+          className="w-full"
         />
       </div>
     </div>

@@ -48,7 +48,7 @@ function Services() {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
-      <ScrollToTopButton />
+      {!isModalOpen && <ScrollToTopButton />}
     </>
   );
 }

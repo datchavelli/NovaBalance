@@ -62,13 +62,13 @@ function Footer() {
                   className="w-8 h-8"
                 />
               </a>
-              <a href="">
+              {/* <a href="">
                 <img
                   src="https://www.svgrepo.com/show/521654/facebook.svg"
                   alt="Facebook"
                   className="w-8 h-8"
                 />
-              </a>
+              </a> */}
               <a href="https://www.instagram.com/novabalancesoftware/">
                 <img
                   src="https://www.svgrepo.com/show/521711/instagram.svg"
@@ -171,7 +171,11 @@ function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
               />
-              <Button name="Prijavi se" color="hover-pink" className="w-1/2" />
+              <Button
+                name="Prijavite se"
+                color="hover-pink"
+                className="w-1/2"
+              />
             </form>
             {status === "success" && (
               <p className="text-green-600 text-sm">You're subscribed!</p>
@@ -194,6 +198,13 @@ function Footer() {
               © {new Date().getFullYear()} NovaBalance. All rights reserved.
             </p>
           </div>
+          <a
+            href="https://novabalance.rs/assets/files/POLITIKA%20PRIVATNOSTI%20I%20POLITIKA%20KOLACICA.pdf"
+            className="text-gray-400 hover:text-white"
+            target="_blank"
+          >
+            Politika privatnosti
+          </a>
         </div>
       </div>
     </footer>
