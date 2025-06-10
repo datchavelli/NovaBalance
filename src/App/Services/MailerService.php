@@ -70,9 +70,9 @@ class MailerService
 
             // ✅ Dodaj prilog (ako postoji)
             $attachmentPath =
-                ROOT_PATH . "/public/files/newsletter-welcome.pdf";
+                __DIR__ . "/../../../public/assets/files/Kako da Uspešno Vodite Računovodstvo _ Vodič za Mikro i Mala Preduzeća.pdf";
             if (file_exists($attachmentPath)) {
-                $this->mail->addAttachment($attachmentPath);
+                $this->mail->addAttachment($attachmentPath, "Kako da Uspesno Vodite Racunovodstvo - Vodic za Mikro i Mala Preduzeca");
             }
 
             return $this->mail->send();
