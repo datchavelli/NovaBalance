@@ -21,9 +21,16 @@ function About() {
           <br />
           Naša misija je jasna - automatizacija računovodstvenih procesa i
           upravljanje dokumentima, njihovo elektronsko arhiviranje uz pomoć
-          integracije sa DoCloop DMS sistemom, kako biste imali više vremena za
-          ono što je zaista važno. Vaše poslovanje raste uz naše inovativne
-          alate.
+          integracije sa{" "}
+          <a
+            href="https://docloop.rs/"
+            target="_blank"
+            className="text-hover-dark-pink"
+          >
+            DoCloop DMS sistemom
+          </a>
+          , kako biste imali više vremena za ono što je zaista važno. Vaše
+          poslovanje raste uz naše inovativne alate.
           <br />
           <br />
           Iza NovaForma softvera stoji tim sa vizijom da računovodstvo učini

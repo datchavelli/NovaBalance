@@ -19,8 +19,7 @@ function Podcast() {
           Da li želite da saznate više?
         </span>
         <h2 className="text-2xl md:text-3xl">
-          Instant Znanje: Digitalna revolucija u računovodstvu: Računovodstvo
-          2.0
+          Konto Kosta i Tajna Formule PDV-a
         </h2>
         <p className="font-merriweather text-sm md:text-base">
           Saznajte kako digitalni alati menjaju način na koji poslujete.
