@@ -111,7 +111,7 @@ const ServiceSection = () => {
                 />
               </a>
               <a
-                href="https://novabalance.rs"
+                href="https://docloop.rs/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center p-4 shadow-xl shadow-xl rounded-xl border border-solid border-gray-400 rounded-xl"
