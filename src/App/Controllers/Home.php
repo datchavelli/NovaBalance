@@ -61,7 +61,7 @@ class Home extends Controller
                 <p><strong>Poruka:</strong> {$data["message"]}</p>
             ";
 
-            $emailSent = $mailer->send("dev@novabalance.rs", $subject, $body);
+            $emailSent = $mailer->send("office@novabalance.rs", $subject, $body);
 
             // ✅ Response handling
             $responseData = ["success" => "Email Saved!"];
@@ -92,8 +92,11 @@ class Home extends Controller
           'drzava' => $this->request->post['drzava'],
           'adresa' => $this->request->post['adresa'],
           'pib' => $this->request->post['pib'],
-          'maticniBroj' => $this->request->post['maticniBroj']
-          ];
+          'maticniBroj' => $this->request->post['maticniBroj'] ?? 0
+    ];
+        if (empty($data['maticniBroj'])) {
+            $data['maticniBroj'] = 0;
+        }
         if ($this->offer->insert($data)) {
             // ✅ Send Email
             $mailer = new \App\Services\MailerService();
@@ -113,7 +116,7 @@ class Home extends Controller
                 <p><strong>Maticni Broj:</strong> {$data["maticniBroj"]}</p>
             ";
 
-            $emailSent = $mailer->send("dev@novabalance.rs", $subject, $body);
+            $emailSent = $mailer->send("office@novabalance.rs", $subject, $body);
 
             // ✅ Response handling
             $responseData = ["success" => "Email Saved!"];
