@@ -27,6 +27,38 @@ class Admin extends Controller
             ]);
         }
     }
+
+    public function contactForm(): Response
+    {
+        if (!isset($_SESSION["user"])) {
+            return $this->view("admin/login.mvc.php");
+        } else {
+            return $this->view("admin/index.mvc.php", [
+                "page" => "contactForm",
+            ]);
+        }
+    }
+
+    public function changeContent(): Response
+    {
+        $data = [
+            "section_id" => $this->request->post['section_id'],
+            "section_title" => $this->request->post['section_title'],
+            "section_content" => $this->request->post['section_content']
+        ];
+
+        $page_modal = $this->pages;
+        $change_data = $page_modal->changeSection($data['section_id'], $data['section_title'], $data['section_content']);
+        if ($change_data) {
+            $responseData = ['success' => "Changed!"];
+        } else {
+            $responseData = ['success' => "Failed!"];
+        }
+        header("Content-Type: application/json");
+        echo json_encode($responseData);
+        exit;
+    }
+
     public function page(): Response
     {
         $page_id = $this->request->get["page_id"];
@@ -40,6 +72,22 @@ class Admin extends Controller
             "page" => "page",
             "sections" => $sections,
             "page_name" => $page
+      ]);
+        }
+    }
+    public function section(): Response
+    {
+        $section_id = $this->request->get["section_id"];
+        $page = $this->pages;
+        $section = $page->getSpecificSection($section_id);
+        $page_details = $page->getPageFromSectionId($section_id);
+        if (!isset($_SESSION['user'])) {
+            return $this->view("admin/login.mvc.php");
+        } else {
+            return $this->view("admin/index.mvc.php", [
+            "page" => "section",
+            "section" => $section[0],
+            "page_details" => $page_details
       ]);
         }
     }
