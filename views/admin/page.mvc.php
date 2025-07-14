@@ -48,7 +48,7 @@
                         <tr>
                           <th style="width: 10px">#</th>
                           <th>Ime Sekcije</th>
-                          <th>Pozicija</th>
+                          <th>Naslov (Heading)</th>
                           <th >Datum Kreiranja</th>
                           <th style="width: 40px">?</th>
                         </tr>
@@ -58,7 +58,7 @@
                         <tr class="align-middle">
                           <td><?= $index ?>.</td>
                           <td><?= $section['section_title'] ?> </td>
-                          <td><?= $section['position'] ?></td>
+                          <td><?= $section['heading'] ?></td>
                           <td><?= $section['created_at'] ?> </td>
                           <td><button class="btn btn-primary edit-section" data-type='edit' data-id='<?= $section['id'] ?>'><i class="ri-edit-line"></i></button><button data-type='delete' class='action-button btn btn-danger'data-id='<?= $section['id'] ?>'><i class="ri-close-large-line"></i></button></td>
                         </tr>
