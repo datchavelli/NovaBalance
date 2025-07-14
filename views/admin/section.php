@@ -52,6 +52,10 @@
                   <input type='text' class='form-control' name='section_title' id='section_title' value='<?= $section['section_title'] ?>'>
                 </div>
                 <div class='form-group'>
+                  <label for='section_title'>Naslov Sekcije (Heading):</label>
+                  <input type='text' class='form-control' name='section_heading' id='section_heading' value='<?= $section['heading'] ?>'>
+                </div>
+                <div class='form-group'>
                   <label for='section_content'>Sadržaj</label>
                   <textarea id='section_content' class='form-control' rows='7' name='section_content'><?= $section['content'] ?></textarea>
                 </div>

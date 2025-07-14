@@ -25,7 +25,18 @@ class Home extends Controller
             "content" => $content,
         ]);
     }
-
+    public function contentEndpoint(): Response
+    {
+        $slug = $this->request->get['slug'];
+        $page = $this->page;
+        $content = $page->getPageContent($slug);
+        if (empty($content)) {
+            $content = ["error" => "No Content Found"];
+        }
+        header("Content-Type: application/json");
+        echo json_encode($content);
+        exit;
+    }
     public function usluge(): Response
     {
         $page = $this->page;

@@ -44,11 +44,12 @@ class Admin extends Controller
         $data = [
             "section_id" => $this->request->post['section_id'],
             "section_title" => $this->request->post['section_title'],
-            "section_content" => $this->request->post['section_content']
+            "section_content" => $this->request->post['section_content'],
+            "section_heading" => $this->request->post['section_heading']
         ];
 
         $page_modal = $this->pages;
-        $change_data = $page_modal->changeSection($data['section_id'], $data['section_title'], $data['section_content']);
+        $change_data = $page_modal->changeSection($data['section_id'], $data['section_title'], $data['section_content'], $data['section_heading']);
         if ($change_data) {
             $responseData = ['success' => "Changed!"];
         } else {

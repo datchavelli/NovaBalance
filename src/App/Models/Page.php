@@ -97,13 +97,14 @@ class Page extends Model
         }
     }
 
-    public function changeSection(string $section_id, string $section_title, string $section_content): bool
+    public function changeSection(string $section_id, string $section_title, string $section_content, string $section_heading): bool
     {
-        $sql = "UPDATE page_sections SET section_title = :title , content = :cont WHERE id = :id ;";
+        $sql = "UPDATE page_sections SET section_title = :title , content = :cont , heading = :head WHERE id = :id ;";
         $conn = $this->database->getConnection();
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(":title", $section_title);
         $stmt->bindParam(":cont", $section_content);
+        $stmt->bindParam(":head", $section_heading);
         $stmt->bindParam(":id", $section_id);
         if ($stmt->execute()) {
             return true;
