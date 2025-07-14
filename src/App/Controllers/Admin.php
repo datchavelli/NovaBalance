@@ -10,10 +10,11 @@ use App\Models\User;
 use App\Services\MailchimpService;
 use App\Models\Page;
 use App\Models\PageSection;
+use App\Models\Contact;
 
 class Admin extends Controller
 {
-    public function __construct(private User $model, private Page $pages)
+    public function __construct(private User $model, private Page $pages, private Contact $contact)
     {
     }
 
@@ -30,11 +31,14 @@ class Admin extends Controller
 
     public function contactForm(): Response
     {
+        $submissions = $this->contact;
+        $submissions = $submissions->getSubmissions();
         if (!isset($_SESSION["user"])) {
             return $this->view("admin/login.mvc.php");
         } else {
             return $this->view("admin/index.mvc.php", [
-                "page" => "contactForm",
+        "page" => "contactForm",
+        "submissions" => $submissions
             ]);
         }
     }

@@ -46,7 +46,8 @@ $(document).ready(function () {
           console.error("Response Text:", jqXHR.responseText);
         },
       });
-    } else if (type == "delete") {
+    } else if (type == "cancel") {
+      window.history.back();
     }
   });
 
